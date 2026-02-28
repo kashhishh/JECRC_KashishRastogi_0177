@@ -1,0 +1,14 @@
+D:\Student_Eligibility_system\bin\Debug\net10.0\Student_Eligibility_system.exe
+D:\Student_Eligibility_system\bin\Debug\net10.0\Student_Eligibility_system.deps.json
+D:\Student_Eligibility_system\bin\Debug\net10.0\Student_Eligibility_system.runtimeconfig.json
+D:\Student_Eligibility_system\bin\Debug\net10.0\Student_Eligibility_system.dll
+D:\Student_Eligibility_system\bin\Debug\net10.0\Student_Eligibility_system.pdb
+D:\Student_Eligibility_system\obj\Debug\net10.0\Student_Eligibility_system.GeneratedMSBuildEditorConfig.editorconfig
+D:\Student_Eligibility_system\obj\Debug\net10.0\Student_Eligibility_system.AssemblyInfoInputs.cache
+D:\Student_Eligibility_system\obj\Debug\net10.0\Student_Eligibility_system.AssemblyInfo.cs
+D:\Student_Eligibility_system\obj\Debug\net10.0\Student_Eligibility_system.csproj.CoreCompileInputs.cache
+D:\Student_Eligibility_system\obj\Debug\net10.0\Student_Eligibility_system.dll
+D:\Student_Eligibility_system\obj\Debug\net10.0\refint\Student_Eligibility_system.dll
+D:\Student_Eligibility_system\obj\Debug\net10.0\Student_Eligibility_system.pdb
+D:\Student_Eligibility_system\obj\Debug\net10.0\Student_Eligibility_system.genruntimeconfig.cache
+D:\Student_Eligibility_system\obj\Debug\net10.0\ref\Student_Eligibility_system.dll
