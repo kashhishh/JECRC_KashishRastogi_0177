@@ -1,0 +1,14 @@
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\bin\Debug\net10.0\Dynamic_tax_assignment.exe
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\bin\Debug\net10.0\Dynamic_tax_assignment.deps.json
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\bin\Debug\net10.0\Dynamic_tax_assignment.runtimeconfig.json
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\bin\Debug\net10.0\Dynamic_tax_assignment.dll
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\bin\Debug\net10.0\Dynamic_tax_assignment.pdb
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\obj\Debug\net10.0\Dynamic_tax_assignment.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\obj\Debug\net10.0\Dynamic_tax_assignment.AssemblyInfoInputs.cache
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\obj\Debug\net10.0\Dynamic_tax_assignment.AssemblyInfo.cs
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\obj\Debug\net10.0\Dynamic_tax_assignment.csproj.CoreCompileInputs.cache
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\obj\Debug\net10.0\Dynamic_tax_assignment.dll
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\obj\Debug\net10.0\refint\Dynamic_tax_assignment.dll
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\obj\Debug\net10.0\Dynamic_tax_assignment.pdb
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\obj\Debug\net10.0\Dynamic_tax_assignment.genruntimeconfig.cache
+D:\Training\Dynamic_tax_assignment\Dynamic_tax_assignment\obj\Debug\net10.0\ref\Dynamic_tax_assignment.dll

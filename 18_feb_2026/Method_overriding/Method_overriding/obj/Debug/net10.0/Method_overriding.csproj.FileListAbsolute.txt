@@ -1,0 +1,14 @@
+D:\Training\Day3\Method_overriding\Method_overriding\bin\Debug\net10.0\Method_overriding.exe
+D:\Training\Day3\Method_overriding\Method_overriding\bin\Debug\net10.0\Method_overriding.deps.json
+D:\Training\Day3\Method_overriding\Method_overriding\bin\Debug\net10.0\Method_overriding.runtimeconfig.json
+D:\Training\Day3\Method_overriding\Method_overriding\bin\Debug\net10.0\Method_overriding.dll
+D:\Training\Day3\Method_overriding\Method_overriding\bin\Debug\net10.0\Method_overriding.pdb
+D:\Training\Day3\Method_overriding\Method_overriding\obj\Debug\net10.0\Method_overriding.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\Day3\Method_overriding\Method_overriding\obj\Debug\net10.0\Method_overriding.AssemblyInfoInputs.cache
+D:\Training\Day3\Method_overriding\Method_overriding\obj\Debug\net10.0\Method_overriding.AssemblyInfo.cs
+D:\Training\Day3\Method_overriding\Method_overriding\obj\Debug\net10.0\Method_overriding.csproj.CoreCompileInputs.cache
+D:\Training\Day3\Method_overriding\Method_overriding\obj\Debug\net10.0\Method_overriding.dll
+D:\Training\Day3\Method_overriding\Method_overriding\obj\Debug\net10.0\refint\Method_overriding.dll
+D:\Training\Day3\Method_overriding\Method_overriding\obj\Debug\net10.0\Method_overriding.pdb
+D:\Training\Day3\Method_overriding\Method_overriding\obj\Debug\net10.0\Method_overriding.genruntimeconfig.cache
+D:\Training\Day3\Method_overriding\Method_overriding\obj\Debug\net10.0\ref\Method_overriding.dll

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Variable</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+
+    <p id="outputgreeting"></p>
+    <p id="output"></p>
+
+    <script>
+        var greeting = "Welcome to JavaScript!";
+        let name = "John";
+
+        console.log(greeting);
+        console.log("Welcome, " + name + "!");
+
+        document.getElementById("outputgreeting").innerHTML =
+            greeting + " " + name + "!";
+
+        var company = "Capgemini";
+        var companyLocation = "Banglore";
+        const year = 2024;
+
+        document.getElementById("output").innerHTML =
+            `Company: ${company}<br>
+             Location: ${companyLocation}<br>
+             Year: ${year}`;
+
+        console.log("Company:", company);
+        console.log("Location:", companyLocation);
+        console.log("Year:", year);
+
+        if (true) {
+        var company = "TCS"; // var overrides outside value
+        let companyLocation = "Mumbai"; // block scope
+
+        console.log(`Inside block: ${company}, ${companyLocation}, ${year}`);
+    }
+
+    console.log(`Outside block: ${company}, ${companyLocation}, ${year}`);
+
+    console.log("\n====== function=======:");
+    function testVar(){
+     var name = "Kashish";// this is a diff variable, scope
+     console.log(name);
+    }
+    testVar();
+     console.log(name); // still john because the functions "name"
+
+
+
+
+     console.log("\n====== Primitive data types=======:");
+     let name2 = "Alice"; // string
+     let age = 30; // number
+     let isStudent = false; // boolean
+     let salary;
+     let bigNumber = 9007199254740991n; // bigint
+     let bonus = null; // null
+     console.log("Name type:", typeof name2);
+     console.log("Age type:", typeof age);
+     console.log("Is Student type:", typeof isStudent);
+     console.log("Salary type:", typeof salary);
+     console.log("Big Number type:", typeof bigNumber);
+     console.log("Bonus type:", typeof bonus);//object (null is of type "object" in JavaScript)
+
+
+
+     console.log("\n====== Non primitive data types=======:");
+     let person = { name: "Alice", age: 30 }; // object
+     let numbers = [1, 2, 3, 4, 5]; // Array
+     let today = new Date(); // Date
+     console.log("Person:", typeof person);
+     console.log("Numbers:",typeof numbers);
+     console.log("Today:",typeof today);
+     function greet() {
+        return"Hello from greet function"; // Function
+     }
+     console.log("Greet:", typeof greet);
+
+    </script>
+</body>
+</html>

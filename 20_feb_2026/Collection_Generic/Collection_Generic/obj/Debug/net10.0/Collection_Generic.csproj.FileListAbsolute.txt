@@ -1,0 +1,14 @@
+D:\Training\Collection_Generic\Collection_Generic\bin\Debug\net10.0\Collection_Generic.exe
+D:\Training\Collection_Generic\Collection_Generic\bin\Debug\net10.0\Collection_Generic.deps.json
+D:\Training\Collection_Generic\Collection_Generic\bin\Debug\net10.0\Collection_Generic.runtimeconfig.json
+D:\Training\Collection_Generic\Collection_Generic\bin\Debug\net10.0\Collection_Generic.dll
+D:\Training\Collection_Generic\Collection_Generic\bin\Debug\net10.0\Collection_Generic.pdb
+D:\Training\Collection_Generic\Collection_Generic\obj\Debug\net10.0\Collection_Generic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\Collection_Generic\Collection_Generic\obj\Debug\net10.0\Collection_Generic.AssemblyInfoInputs.cache
+D:\Training\Collection_Generic\Collection_Generic\obj\Debug\net10.0\Collection_Generic.AssemblyInfo.cs
+D:\Training\Collection_Generic\Collection_Generic\obj\Debug\net10.0\Collection_Generic.csproj.CoreCompileInputs.cache
+D:\Training\Collection_Generic\Collection_Generic\obj\Debug\net10.0\Collection_Generic.dll
+D:\Training\Collection_Generic\Collection_Generic\obj\Debug\net10.0\refint\Collection_Generic.dll
+D:\Training\Collection_Generic\Collection_Generic\obj\Debug\net10.0\Collection_Generic.pdb
+D:\Training\Collection_Generic\Collection_Generic\obj\Debug\net10.0\Collection_Generic.genruntimeconfig.cache
+D:\Training\Collection_Generic\Collection_Generic\obj\Debug\net10.0\ref\Collection_Generic.dll

@@ -1,0 +1,14 @@
+D:\Training\Access_modifier\Access_modifier\obj\Debug\net10.0\Access_modifier.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\Access_modifier\Access_modifier\obj\Debug\net10.0\Access_modifier.AssemblyInfoInputs.cache
+D:\Training\Access_modifier\Access_modifier\obj\Debug\net10.0\Access_modifier.AssemblyInfo.cs
+D:\Training\Access_modifier\Access_modifier\obj\Debug\net10.0\Access_modifier.csproj.CoreCompileInputs.cache
+D:\Training\Access_modifier\Access_modifier\bin\Debug\net10.0\Access_modifier.exe
+D:\Training\Access_modifier\Access_modifier\bin\Debug\net10.0\Access_modifier.deps.json
+D:\Training\Access_modifier\Access_modifier\bin\Debug\net10.0\Access_modifier.runtimeconfig.json
+D:\Training\Access_modifier\Access_modifier\bin\Debug\net10.0\Access_modifier.dll
+D:\Training\Access_modifier\Access_modifier\bin\Debug\net10.0\Access_modifier.pdb
+D:\Training\Access_modifier\Access_modifier\obj\Debug\net10.0\Access_modifier.dll
+D:\Training\Access_modifier\Access_modifier\obj\Debug\net10.0\refint\Access_modifier.dll
+D:\Training\Access_modifier\Access_modifier\obj\Debug\net10.0\Access_modifier.pdb
+D:\Training\Access_modifier\Access_modifier\obj\Debug\net10.0\Access_modifier.genruntimeconfig.cache
+D:\Training\Access_modifier\Access_modifier\obj\Debug\net10.0\ref\Access_modifier.dll

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Training\\True OR False\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BA6ECBE4-BAFD-43B1-9433-5059417AA0C5}|True OR False\\True OR False.csproj|d:\\training\\true or false\\true or false\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA6ECBE4-BAFD-43B1-9433-5059417AA0C5}|True OR False\\True OR False.csproj|solutionrelative:true or false\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Training\\True OR False\\True OR False\\Program.cs",
+              "RelativeDocumentMoniker": "True OR False\\Program.cs",
+              "ToolTip": "D:\\Training\\True OR False\\True OR False\\Program.cs",
+              "RelativeToolTip": "True OR False\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T08:55:51.106Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

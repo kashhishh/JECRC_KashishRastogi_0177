@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Training\\Product_Management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E565AC9-4F38-F444-F4B0-E35D8F6F6A6A}|Product_Management\\Product_Management.csproj|d:\\training\\product_management\\product_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E565AC9-4F38-F444-F4B0-E35D8F6F6A6A}|Product_Management\\Product_Management.csproj|solutionrelative:product_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Training\\Product_Management\\Product_Management\\Program.cs",
+              "RelativeDocumentMoniker": "Product_Management\\Program.cs",
+              "ToolTip": "D:\\Training\\Product_Management\\Product_Management\\Program.cs",
+              "RelativeToolTip": "Product_Management\\Program.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwDcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T07:11:53.128Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

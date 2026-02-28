@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Training\\Method_overhiding\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{798930C7-0DC8-4DA7-A2F9-5C7076BB4BF1}|Method_overhiding\\Method_overhiding.csproj|d:\\training\\method_overhiding\\method_overhiding\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{798930C7-0DC8-4DA7-A2F9-5C7076BB4BF1}|Method_overhiding\\Method_overhiding.csproj|solutionrelative:method_overhiding\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Training\\Method_overhiding\\Method_overhiding\\Program.cs",
+              "RelativeDocumentMoniker": "Method_overhiding\\Program.cs",
+              "ToolTip": "D:\\Training\\Method_overhiding\\Method_overhiding\\Program.cs",
+              "RelativeToolTip": "Method_overhiding\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA1wB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T11:55:13.497Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

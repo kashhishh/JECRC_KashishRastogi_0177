@@ -1,0 +1,14 @@
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\bin\Debug\net10.0\GenericDes_Assignment.exe
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\bin\Debug\net10.0\GenericDes_Assignment.deps.json
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\bin\Debug\net10.0\GenericDes_Assignment.runtimeconfig.json
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\bin\Debug\net10.0\GenericDes_Assignment.dll
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\bin\Debug\net10.0\GenericDes_Assignment.pdb
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\obj\Debug\net10.0\GenericDes_Assignment.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\obj\Debug\net10.0\GenericDes_Assignment.AssemblyInfoInputs.cache
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\obj\Debug\net10.0\GenericDes_Assignment.AssemblyInfo.cs
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\obj\Debug\net10.0\GenericDes_Assignment.csproj.CoreCompileInputs.cache
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\obj\Debug\net10.0\GenericDes_Assignment.dll
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\obj\Debug\net10.0\refint\GenericDes_Assignment.dll
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\obj\Debug\net10.0\GenericDes_Assignment.pdb
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\obj\Debug\net10.0\GenericDes_Assignment.genruntimeconfig.cache
+D:\Training\GenericDes_Assignment\GenericDes_Assignment\obj\Debug\net10.0\ref\GenericDes_Assignment.dll

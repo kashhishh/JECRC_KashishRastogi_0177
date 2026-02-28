@@ -1,0 +1,14 @@
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\bin\Debug\net10.0\NotificationSystem_task.exe
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\bin\Debug\net10.0\NotificationSystem_task.deps.json
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\bin\Debug\net10.0\NotificationSystem_task.runtimeconfig.json
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\bin\Debug\net10.0\NotificationSystem_task.dll
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\bin\Debug\net10.0\NotificationSystem_task.pdb
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\obj\Debug\net10.0\NotificationSystem_task.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\obj\Debug\net10.0\NotificationSystem_task.AssemblyInfoInputs.cache
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\obj\Debug\net10.0\NotificationSystem_task.AssemblyInfo.cs
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\obj\Debug\net10.0\NotificationSystem_task.csproj.CoreCompileInputs.cache
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\obj\Debug\net10.0\NotificationSystem_task.dll
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\obj\Debug\net10.0\refint\NotificationSystem_task.dll
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\obj\Debug\net10.0\NotificationSystem_task.pdb
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\obj\Debug\net10.0\NotificationSystem_task.genruntimeconfig.cache
+D:\Training\Day_4\NotificationSystem_task\NotificationSystem_task\obj\Debug\net10.0\ref\NotificationSystem_task.dll

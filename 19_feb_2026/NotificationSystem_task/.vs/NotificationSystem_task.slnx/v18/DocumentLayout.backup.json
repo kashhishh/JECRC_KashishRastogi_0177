@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Training\\Day_4\\NotificationSystem_task\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{83574123-C7A4-57C8-0818-8EA9F2BD724B}|NotificationSystem_task\\NotificationSystem_task.csproj|d:\\training\\day_4\\notificationsystem_task\\notificationsystem_task\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83574123-C7A4-57C8-0818-8EA9F2BD724B}|NotificationSystem_task\\NotificationSystem_task.csproj|solutionrelative:notificationsystem_task\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Training\\Day_4\\NotificationSystem_task\\NotificationSystem_task\\Program.cs",
+              "RelativeDocumentMoniker": "NotificationSystem_task\\Program.cs",
+              "ToolTip": "D:\\Training\\Day_4\\NotificationSystem_task\\NotificationSystem_task\\Program.cs",
+              "RelativeToolTip": "NotificationSystem_task\\Program.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T06:31:56.966Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

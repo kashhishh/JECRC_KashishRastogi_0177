@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Training\\Sorting_Array\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD911CE2-65FE-4B5E-9F51-180C0BA1BB0A}|Sorting_Array\\Sorting_Array.csproj|d:\\training\\sorting_array\\sorting_array\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD911CE2-65FE-4B5E-9F51-180C0BA1BB0A}|Sorting_Array\\Sorting_Array.csproj|solutionrelative:sorting_array\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Training\\Sorting_Array\\Sorting_Array\\Program.cs",
+              "RelativeDocumentMoniker": "Sorting_Array\\Program.cs",
+              "ToolTip": "D:\\Training\\Sorting_Array\\Sorting_Array\\Program.cs",
+              "RelativeToolTip": "Sorting_Array\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T06:23:09.029Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

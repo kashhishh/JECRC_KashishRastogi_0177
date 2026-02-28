@@ -1,0 +1,14 @@
+D:\Training\Exception_handling\Exception_handling\bin\Debug\net10.0\Exception_handling.exe
+D:\Training\Exception_handling\Exception_handling\bin\Debug\net10.0\Exception_handling.deps.json
+D:\Training\Exception_handling\Exception_handling\bin\Debug\net10.0\Exception_handling.runtimeconfig.json
+D:\Training\Exception_handling\Exception_handling\bin\Debug\net10.0\Exception_handling.dll
+D:\Training\Exception_handling\Exception_handling\bin\Debug\net10.0\Exception_handling.pdb
+D:\Training\Exception_handling\Exception_handling\obj\Debug\net10.0\Exception_handling.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\Exception_handling\Exception_handling\obj\Debug\net10.0\Exception_handling.AssemblyInfoInputs.cache
+D:\Training\Exception_handling\Exception_handling\obj\Debug\net10.0\Exception_handling.AssemblyInfo.cs
+D:\Training\Exception_handling\Exception_handling\obj\Debug\net10.0\Exception_handling.csproj.CoreCompileInputs.cache
+D:\Training\Exception_handling\Exception_handling\obj\Debug\net10.0\Exception_handling.dll
+D:\Training\Exception_handling\Exception_handling\obj\Debug\net10.0\refint\Exception_handling.dll
+D:\Training\Exception_handling\Exception_handling\obj\Debug\net10.0\Exception_handling.pdb
+D:\Training\Exception_handling\Exception_handling\obj\Debug\net10.0\Exception_handling.genruntimeconfig.cache
+D:\Training\Exception_handling\Exception_handling\obj\Debug\net10.0\ref\Exception_handling.dll

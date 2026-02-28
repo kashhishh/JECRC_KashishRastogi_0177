@@ -1,0 +1,14 @@
+D:\Training\True OR False\True OR False\bin\Debug\net10.0\True OR False.exe
+D:\Training\True OR False\True OR False\bin\Debug\net10.0\True OR False.deps.json
+D:\Training\True OR False\True OR False\bin\Debug\net10.0\True OR False.runtimeconfig.json
+D:\Training\True OR False\True OR False\bin\Debug\net10.0\True OR False.dll
+D:\Training\True OR False\True OR False\bin\Debug\net10.0\True OR False.pdb
+D:\Training\True OR False\True OR False\obj\Debug\net10.0\True OR False.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\True OR False\True OR False\obj\Debug\net10.0\True OR False.AssemblyInfoInputs.cache
+D:\Training\True OR False\True OR False\obj\Debug\net10.0\True OR False.AssemblyInfo.cs
+D:\Training\True OR False\True OR False\obj\Debug\net10.0\True OR False.csproj.CoreCompileInputs.cache
+D:\Training\True OR False\True OR False\obj\Debug\net10.0\True OR False.dll
+D:\Training\True OR False\True OR False\obj\Debug\net10.0\refint\True OR False.dll
+D:\Training\True OR False\True OR False\obj\Debug\net10.0\True OR False.pdb
+D:\Training\True OR False\True OR False\obj\Debug\net10.0\True OR False.genruntimeconfig.cache
+D:\Training\True OR False\True OR False\obj\Debug\net10.0\ref\True OR False.dll

@@ -1,0 +1,14 @@
+D:\Training\Requirement_task\Requirement_task\bin\Debug\net10.0\Requirement_task.exe
+D:\Training\Requirement_task\Requirement_task\bin\Debug\net10.0\Requirement_task.deps.json
+D:\Training\Requirement_task\Requirement_task\bin\Debug\net10.0\Requirement_task.runtimeconfig.json
+D:\Training\Requirement_task\Requirement_task\bin\Debug\net10.0\Requirement_task.dll
+D:\Training\Requirement_task\Requirement_task\bin\Debug\net10.0\Requirement_task.pdb
+D:\Training\Requirement_task\Requirement_task\obj\Debug\net10.0\Requirement_task.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\Requirement_task\Requirement_task\obj\Debug\net10.0\Requirement_task.AssemblyInfoInputs.cache
+D:\Training\Requirement_task\Requirement_task\obj\Debug\net10.0\Requirement_task.AssemblyInfo.cs
+D:\Training\Requirement_task\Requirement_task\obj\Debug\net10.0\Requirement_task.csproj.CoreCompileInputs.cache
+D:\Training\Requirement_task\Requirement_task\obj\Debug\net10.0\Requirement_task.dll
+D:\Training\Requirement_task\Requirement_task\obj\Debug\net10.0\refint\Requirement_task.dll
+D:\Training\Requirement_task\Requirement_task\obj\Debug\net10.0\Requirement_task.pdb
+D:\Training\Requirement_task\Requirement_task\obj\Debug\net10.0\Requirement_task.genruntimeconfig.cache
+D:\Training\Requirement_task\Requirement_task\obj\Debug\net10.0\ref\Requirement_task.dll

@@ -1,0 +1,14 @@
+D:\Training\Arrayyy\Arrayyy\bin\Debug\net10.0\Arrayyy.exe
+D:\Training\Arrayyy\Arrayyy\bin\Debug\net10.0\Arrayyy.deps.json
+D:\Training\Arrayyy\Arrayyy\bin\Debug\net10.0\Arrayyy.runtimeconfig.json
+D:\Training\Arrayyy\Arrayyy\bin\Debug\net10.0\Arrayyy.dll
+D:\Training\Arrayyy\Arrayyy\bin\Debug\net10.0\Arrayyy.pdb
+D:\Training\Arrayyy\Arrayyy\obj\Debug\net10.0\Arrayyy.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\Arrayyy\Arrayyy\obj\Debug\net10.0\Arrayyy.AssemblyInfoInputs.cache
+D:\Training\Arrayyy\Arrayyy\obj\Debug\net10.0\Arrayyy.AssemblyInfo.cs
+D:\Training\Arrayyy\Arrayyy\obj\Debug\net10.0\Arrayyy.csproj.CoreCompileInputs.cache
+D:\Training\Arrayyy\Arrayyy\obj\Debug\net10.0\Arrayyy.dll
+D:\Training\Arrayyy\Arrayyy\obj\Debug\net10.0\refint\Arrayyy.dll
+D:\Training\Arrayyy\Arrayyy\obj\Debug\net10.0\Arrayyy.pdb
+D:\Training\Arrayyy\Arrayyy\obj\Debug\net10.0\Arrayyy.genruntimeconfig.cache
+D:\Training\Arrayyy\Arrayyy\obj\Debug\net10.0\ref\Arrayyy.dll

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Training\\Switch_statement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{10AEB6C3-F98F-435E-A885-E30076F346D2}|Switch_statement\\Switch_statement.csproj|d:\\training\\switch_statement\\switch_statement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10AEB6C3-F98F-435E-A885-E30076F346D2}|Switch_statement\\Switch_statement.csproj|solutionrelative:switch_statement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Training\\Switch_statement\\Switch_statement\\Program.cs",
+              "RelativeDocumentMoniker": "Switch_statement\\Program.cs",
+              "ToolTip": "D:\\Training\\Switch_statement\\Switch_statement\\Program.cs",
+              "RelativeToolTip": "Switch_statement\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T06:17:44.552Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

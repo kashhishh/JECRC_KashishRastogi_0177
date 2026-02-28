@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Training\\Day_4\\Method_overriding\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{93C8FB40-2BCE-45E1-87C2-CFDD05610021}|Method_overriding\\Method_overriding.csproj|d:\\training\\day_4\\method_overriding\\method_overriding\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93C8FB40-2BCE-45E1-87C2-CFDD05610021}|Method_overriding\\Method_overriding.csproj|solutionrelative:method_overriding\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Training\\Day_4\\Method_overriding\\Method_overriding\\Program.cs",
+              "RelativeDocumentMoniker": "Method_overriding\\Program.cs",
+              "ToolTip": "D:\\Training\\Day_4\\Method_overriding\\Method_overriding\\Program.cs",
+              "RelativeToolTip": "Method_overriding\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T11:52:55.492Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

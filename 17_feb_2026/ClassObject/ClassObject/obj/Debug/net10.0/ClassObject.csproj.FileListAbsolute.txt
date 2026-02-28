@@ -1,0 +1,14 @@
+D:\Training\ClassObject\ClassObject\obj\Debug\net10.0\ClassObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\ClassObject\ClassObject\obj\Debug\net10.0\ClassObject.AssemblyInfoInputs.cache
+D:\Training\ClassObject\ClassObject\obj\Debug\net10.0\ClassObject.AssemblyInfo.cs
+D:\Training\ClassObject\ClassObject\obj\Debug\net10.0\ClassObject.csproj.CoreCompileInputs.cache
+D:\Training\ClassObject\ClassObject\bin\Debug\net10.0\ClassObject.exe
+D:\Training\ClassObject\ClassObject\bin\Debug\net10.0\ClassObject.deps.json
+D:\Training\ClassObject\ClassObject\bin\Debug\net10.0\ClassObject.runtimeconfig.json
+D:\Training\ClassObject\ClassObject\bin\Debug\net10.0\ClassObject.dll
+D:\Training\ClassObject\ClassObject\bin\Debug\net10.0\ClassObject.pdb
+D:\Training\ClassObject\ClassObject\obj\Debug\net10.0\ClassObject.dll
+D:\Training\ClassObject\ClassObject\obj\Debug\net10.0\refint\ClassObject.dll
+D:\Training\ClassObject\ClassObject\obj\Debug\net10.0\ClassObject.pdb
+D:\Training\ClassObject\ClassObject\obj\Debug\net10.0\ClassObject.genruntimeconfig.cache
+D:\Training\ClassObject\ClassObject\obj\Debug\net10.0\ref\ClassObject.dll

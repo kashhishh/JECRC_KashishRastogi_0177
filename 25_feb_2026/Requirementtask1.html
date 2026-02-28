@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            margin: 5px 0;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2> Inventory Management System</h2>
+    <p><strong>Company:</strong> <span id="company"></span></p>
+    <p><strong>Warehouse:</strong> <span id="warehouse"></span></p>
+    <p><strong>Total Products:</strong> <span id="total"></span></p>
+
+    <button onclick="displayProducts()">Display Products</button>
+    <button onclick="showInventoryValue()">Calculate Inventory Value</button>
+    <button onclick="applyDiscount()">Apply 10% Discount</button>
+
+    <h3>Output:</h3>
+    <pre id="output"></pre>
+
+    <script>
+        
+        // 1. Global Variables
+        // =======================
+
+        const companyName = "Smart Inventory Ltd";
+        let warehouseLocation = "Delhi";
+        var totalProducts = 0;
+
+        
+        // 2. Array of Products
+        // =======================
+
+        const products = [
+            { id: 1, name: "Laptop", price: 50000, quantity: 10 },
+            { id: 2, name: "Mouse", price: 500, quantity: 50 },
+            { id: 3, name: "Keyboard", price: 1500, quantity: 30 }
+        ];
+
+        totalProducts = products.length;
+
+        // Display initial data
+        document.getElementById("company").innerText = companyName;
+        document.getElementById("warehouse").innerText = warehouseLocation;
+        document.getElementById("total").innerText = totalProducts;
+
+        
+        // 3. Functions
+        // =======================
+
+        // Display products (for loop)
+        function displayProducts() {
+            let text = "Product List:\n";
+            for (let i = 0; i < products.length; i++) {
+                text +=
+                    "ID: " + products[i].id +
+                    ", Name: " + products[i].name +
+                    ", Price: " + products[i].price +
+                    ", Quantity: " + products[i].quantity + "\n";
+            }
+            document.getElementById("output").innerText = text;
+        }
+
+        // Calculate inventory value
+        function calculateInventoryValue() {
+            let totalValue = 0;
+            for (let i = 0; i < products.length; i++) {
+                totalValue += products[i].price * products[i].quantity;
+            }
+            return totalValue;
+        }
+
+        function showInventoryValue() {
+            document.getElementById("output").innerText =
+                "Total Inventory Value: " + calculateInventoryValue();
+        }
+
+        // Apply discount (default parameter)
+        function applyDiscount(discountPercent = 10) {
+            for (let i = 0; i < products.length; i++) {
+                products[i].price -= products[i].price * (discountPercent / 100);
+            }
+            displayProducts();
+        }
+
+        
+        // 4. Block Scope Demo
+        // =======================
+
+        {
+            let warehouseLocation = "Mumbai"; // block scoped
+            var totalProducts = 999;          // not block scoped
+            console.log("Inside Block:", warehouseLocation, totalProducts);
+        }
+
+        console.log("After Block:", warehouseLocation, totalProducts);
+    </script>
+
+</body>
+</html>

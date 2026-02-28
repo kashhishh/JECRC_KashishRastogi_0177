@@ -1,0 +1,14 @@
+D:\Training\ArrayDemo2\ArrayDemo2\bin\Debug\net10.0\ArrayDemo2.exe
+D:\Training\ArrayDemo2\ArrayDemo2\bin\Debug\net10.0\ArrayDemo2.deps.json
+D:\Training\ArrayDemo2\ArrayDemo2\bin\Debug\net10.0\ArrayDemo2.runtimeconfig.json
+D:\Training\ArrayDemo2\ArrayDemo2\bin\Debug\net10.0\ArrayDemo2.dll
+D:\Training\ArrayDemo2\ArrayDemo2\bin\Debug\net10.0\ArrayDemo2.pdb
+D:\Training\ArrayDemo2\ArrayDemo2\obj\Debug\net10.0\ArrayDemo2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\ArrayDemo2\ArrayDemo2\obj\Debug\net10.0\ArrayDemo2.AssemblyInfoInputs.cache
+D:\Training\ArrayDemo2\ArrayDemo2\obj\Debug\net10.0\ArrayDemo2.AssemblyInfo.cs
+D:\Training\ArrayDemo2\ArrayDemo2\obj\Debug\net10.0\ArrayDemo2.csproj.CoreCompileInputs.cache
+D:\Training\ArrayDemo2\ArrayDemo2\obj\Debug\net10.0\ArrayDemo2.dll
+D:\Training\ArrayDemo2\ArrayDemo2\obj\Debug\net10.0\refint\ArrayDemo2.dll
+D:\Training\ArrayDemo2\ArrayDemo2\obj\Debug\net10.0\ArrayDemo2.pdb
+D:\Training\ArrayDemo2\ArrayDemo2\obj\Debug\net10.0\ArrayDemo2.genruntimeconfig.cache
+D:\Training\ArrayDemo2\ArrayDemo2\obj\Debug\net10.0\ref\ArrayDemo2.dll

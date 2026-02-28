@@ -1,0 +1,14 @@
+D:\Training\exercise_2\exercise_2\bin\Debug\net10.0\exercise_2.exe
+D:\Training\exercise_2\exercise_2\bin\Debug\net10.0\exercise_2.deps.json
+D:\Training\exercise_2\exercise_2\bin\Debug\net10.0\exercise_2.runtimeconfig.json
+D:\Training\exercise_2\exercise_2\bin\Debug\net10.0\exercise_2.dll
+D:\Training\exercise_2\exercise_2\bin\Debug\net10.0\exercise_2.pdb
+D:\Training\exercise_2\exercise_2\obj\Debug\net10.0\exercise_2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\exercise_2\exercise_2\obj\Debug\net10.0\exercise_2.AssemblyInfoInputs.cache
+D:\Training\exercise_2\exercise_2\obj\Debug\net10.0\exercise_2.AssemblyInfo.cs
+D:\Training\exercise_2\exercise_2\obj\Debug\net10.0\exercise_2.csproj.CoreCompileInputs.cache
+D:\Training\exercise_2\exercise_2\obj\Debug\net10.0\exercise_2.dll
+D:\Training\exercise_2\exercise_2\obj\Debug\net10.0\refint\exercise_2.dll
+D:\Training\exercise_2\exercise_2\obj\Debug\net10.0\exercise_2.pdb
+D:\Training\exercise_2\exercise_2\obj\Debug\net10.0\exercise_2.genruntimeconfig.cache
+D:\Training\exercise_2\exercise_2\obj\Debug\net10.0\ref\exercise_2.dll

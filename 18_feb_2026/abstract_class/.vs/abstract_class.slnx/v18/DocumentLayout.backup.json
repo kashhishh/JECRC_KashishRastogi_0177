@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Training\\abstract_class\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2E8983EB-8AF0-7C96-0188-DD24205976D1}|abstract_class\\abstract_class.csproj|d:\\training\\abstract_class\\abstract_class\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E8983EB-8AF0-7C96-0188-DD24205976D1}|abstract_class\\abstract_class.csproj|solutionrelative:abstract_class\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Training\\abstract_class\\abstract_class\\Program.cs",
+              "RelativeDocumentMoniker": "abstract_class\\Program.cs",
+              "ToolTip": "D:\\Training\\abstract_class\\abstract_class\\Program.cs",
+              "RelativeToolTip": "abstract_class\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T09:45:37.874Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
