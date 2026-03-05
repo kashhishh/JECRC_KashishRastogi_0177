@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation Logger</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right,#ff7e5f,#feb47b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+input{
+    padding:10px;
+    width:220px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    margin-bottom:15px;
+}
+
+button{
+    padding:10px 18px;
+    border:none;
+    border-radius:6px;
+    background:#dc3545;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#b52a37;
+}
+
+.note{
+    margin-top:20px;
+    font-size:14px;
+    color:#555;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Email Validation</h2>
+
+<input id="email" placeholder="Enter Email">
+
+<br>
+
+<button onclick="validateForm()">Submit</button>
+
+<div class="note">
+Open Console (F12) to see logs
+</div>
+
+</div>
+
+<script>
+
+// Simple Logger Object
+const logger = {
+
+log:function(level,message,data){
+
+const logEntry = {
+level:level,
+message:message,
+data:data,
+time:new Date().toISOString()
+};
+
+console.warn("LOG:",logEntry);
+
+}
+
+};
+
+// Form Validation Function
+function validateForm(){
+
+const email = document.getElementById("email").value;
+
+if(!email.includes("@")){
+
+logger.log("WARN","Invalid Email Entered",email);
+
+alert("Invalid email");
+
+}else{
+
+console.log("Valid Email:",email);
+
+alert("Email submitted successfully");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

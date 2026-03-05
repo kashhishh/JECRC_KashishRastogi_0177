@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Track User Login Activity</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+input{
+    padding:10px;
+    width:220px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    margin-bottom:15px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:6px;
+    background:#007bff;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+.note{
+    margin-top:20px;
+    color:#555;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>User Login</h2>
+
+<input id="username" placeholder="Enter Username">
+
+<br>
+
+<button onclick="login()">Login</button>
+
+<div class="note">
+Open Console (F12) to see login logs
+</div>
+
+</div>
+
+<script>
+
+function login(){
+
+const user = document.getElementById("username").value;
+
+const logData = {
+level: "INFO",
+message: "User Login Attempt",
+username: user,
+time: new Date().toISOString()
+};
+
+console.log("Preparing log:", logData);
+
+fetch("https://jsonplaceholder.typicode.com/posts",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify(logData)
+})
+
+.then(response => response.json())
+
+.then(data => {
+
+console.log("Log successfully sent to server:", data);
+
+alert("Login activity logged successfully!");
+
+})
+
+.catch(error => {
+
+console.error("Logging failed:", error);
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
