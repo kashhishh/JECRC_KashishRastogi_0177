@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Secure Banking App</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#eef2f7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+h2{
+    color:#1a3c6e;
+}
+
+p{
+    color:#555;
+    margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Secure Banking Portal</h2>
+    <p>Right click is disabled on this page for security purposes.</p>
+</div>
+
+<script>
+
+document.addEventListener("contextmenu", function(e){
+
+    e.preventDefault();
+
+    console.warn("Right click disabled for security");
+
+});
+
+</script>
+
+</body>
+</html>
