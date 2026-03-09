@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Todo App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Todo App</h1>
+
+<button onclick="toggleDark()">Toggle Dark Mode</button>
+
+<br><br>
+
+<div class="input-section">
+<input id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add</button>
+</div>
+
+<br>
+
+<input id="searchInput" placeholder="Search tasks..." onkeyup="searchTask()">
+
+<br><br>
+
+<div class="filters">
+<button onclick="filterTasks('all')">All</button>
+<button onclick="filterTasks('active')">Active</button>
+<button onclick="filterTasks('completed')">Completed</button>
+</div>
+
+<ul id="taskList"></ul>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
