@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Button Click Event</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+text-align:center;
+padding:50px;
+background:#f4f6f8;
+}
+
+button{
+padding:12px 25px;
+font-size:16px;
+background:#007bff;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Login Button Click Event</h2>
+
+<button id="loginBtn">Login</button>
+
+<script>
+
+// Button click event using arrow function
+document.getElementById("loginBtn").addEventListener("click", (e) => {
+
+console.log("Login button clicked");
+
+alert("Login process started");
+
+});
+
+</script>
+
+</body>
+
+</html>

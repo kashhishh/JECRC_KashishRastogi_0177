@@ -37,7 +37,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Use CORS - This must go here, before MapControllers
+
 app.UseCors("AllowAll");
 
 app.UseAuthorization();
