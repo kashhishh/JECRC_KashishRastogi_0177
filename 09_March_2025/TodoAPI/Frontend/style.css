@@ -1,0 +1,112 @@
+body{
+font-family: 'Segoe UI', Arial, sans-serif;
+background: linear-gradient(135deg,#4facfe,#00f2fe);
+margin:0;
+padding:0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:30px;
+border-radius:12px;
+width:450px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+h1{
+margin-bottom:20px;
+color:#333;
+}
+
+input{
+padding:10px;
+width:65%;
+border:1px solid #ccc;
+border-radius:6px;
+outline:none;
+font-size:14px;
+}
+
+input:focus
+
+button{
+padding:10px 15px;
+border:none;
+border-radius:6px;
+background:#4facfe;
+color:white;
+cursor:pointer;
+font-size:14px;
+transition:0.2s;
+}
+
+button:hover{
+background:#2e8ef7;
+transform:scale(1.05);
+}
+
+ul{
+list-style:none;
+padding:0;
+margin-top:20px;
+}
+
+li{
+background:#f9f9f9;
+padding:12px;
+margin-bottom:10px;
+border-radius:6px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+transition:0.2s;
+}
+
+li:hover
+
+li span{
+flex:1;
+text-align:left;
+}
+
+li button{
+background:#ff4d4d;
+margin-left:8px;
+}
+
+li button:hover
+
+.filters{
+margin-top:10px;
+}
+
+.filters button{
+background:#6c63ff;
+margin:3px;
+}
+
+.filters button:hover
+
+.dark{
+background:#1e1e1e;
+}
+
+.dark .container{
+background:#2b2b2b;
+color:white;
+}
+
+.dark li{
+background:#3b3b3b;
+}
+
+.dark input{
+background:#444;
+color:white;
+border:1px solid #666;
+}
