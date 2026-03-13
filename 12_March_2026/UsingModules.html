@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+body{
+font-family: Arial;
+padding:40px;
+}
+
+h2{
+margin-top:40px;
+}
+
+.container{
+display:flex;
+gap:40px;
+}
+
+.box{
+border:1px solid #ccc;
+padding:20px;
+width:300px;
+border-radius:8px;
+}
+
+button{
+margin-top:10px;
+padding:6px 12px;
+}
+
+.result{
+margin-top:10px;
+font-weight:bold;
+color:blue;
+}
+</style>
+</head>
+<body>
+    <h1> Using Modules in Javascript</h1>
+    <div class="container">
+
+<div class="box">
+<h2>Project 1 (Without Modules)</h2>
+<input id="email1" placeholder="Enter Email">
+<button onclick="checkEmail1()">Check</button>
+<p id="result1" class="result"></p>
+</div>
+
+<div class="box">
+<h2>Project 2 (Duplicate Code)</h2>
+<input id="email2" placeholder="Enter Email">
+<button onclick="checkEmail2()">Check</button>
+<p id="result2" class="result"></p>
+</div>
+
+<div class="box">
+<h2>Project 3 (Using Modules)</h2>
+
+<p>Today's Date: <span id="date3"></span></p>
+
+<input id="email3" placeholder="Enter Email">
+
+<button onclick="checkEmail3()">Check</button>
+
+<p id="result3" class="result"></p>
+
+</div>
+
+</div>
+    <script>
+        // Before using Modules project 1
+        function formatDate(date) {
+    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+}
+
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function checkEmail1() {
+    const email = document.getElementById('email1').value;
+    const result = validateEmail(email) ? 'Valid email' : 'Invalid email';
+    document.getElementById('result1').textContent = result;
+}
+       //Before using Modules Project 2(duplicate code)
+       function formatDate2(date) {
+    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+}
+
+function validateEmail2(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function checkEmail2() {
+    const email = document.getElementById('email2').value;
+    const result = validateEmail(email) ? 'Valid email' : 'Invalid email';
+    document.getElementById('result2').textContent = result;
+}
+
+// after using modules
+const Utils = {
+
+    formatDate(date){
+        return `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
+    },
+
+    validateEmail(email){
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+};
+
+document.getElementById("date3").innerText = Utils.formatDate(new Date());
+
+function checkEmail3(){
+
+    const email = document.getElementById("email3").value;
+
+    const result = Utils.validateEmail(email)
+        ? "Valid Email"
+        : "Invalid Email";
+
+    document.getElementById("result3").innerText = result;
+
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Using Promises + Dynamic Import</title>
+
+<style>
+
+body{
+font-family: Arial;
+padding:40px;
+background:#f5f5f5;
+}
+
+.container{
+border:1px solid #ccc;
+background:white;
+padding:25px;
+width:450px;
+border-radius:8px;
+}
+
+input{
+margin:8px 0;
+padding:6px;
+width:120px;
+}
+
+button{
+padding:8px 14px;
+margin-top:10px;
+cursor:pointer;
+}
+
+.pending{
+color:orange;
+font-weight:bold;
+}
+
+.fulfilled{
+color:green;
+font-weight:bold;
+}
+
+.rejected{
+color:red;
+font-weight:bold;
+}
+
+.result{
+margin-top:10px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Promises Calculator (Dynamic Module)</h1>
+
+<div class="container">
+
+<label>Number 1:</label><br> <input id="num1" type="text"><br>
+
+<label>Number 2:</label><br> <input id="num2" type="text"><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<p id="state">State: Idle</p>
+
+<div class="result" id="addResult"></div>
+<div class="result" id="subtractResult"></div>
+<div class="result" id="multiplyResult"></div>
+<div class="result" id="divideResult"></div>
+
+</div>
+
+<script type="module">
+
+// Using Import/Export Project (Utils module)
+
+const Utils = `
+export const PI = 3.14159;
+
+export function add(a,b){
+return a + b;
+}
+
+export function subtract(a,b){
+return a - b;
+}
+
+export function multiply(a,b){
+return a * b;
+}
+
+export function divide(a,b){
+if(b === 0){
+throw new Error("Cannot divide by zero");
+}
+return a / b;
+}
+`;
+
+const blob = new Blob([Utils], { type:'text/javascript' });
+
+const url = URL.createObjectURL(blob);
+
+// Dynamically import module
+import(url).then(module => {
+
+window.calculate = function(){
+
+const a = Number(document.getElementById('num1').value);
+const b = Number(document.getElementById('num2').value);
+const state = document.getElementById('state');
+
+// Promise to perform calculation
+const calculationPromise = new Promise((resolve, reject)=>{
+
+// Pending state
+state.innerText="State: Pending...";
+state.className="pending";
+
+setTimeout(()=>{
+
+if(isNaN(a) || isNaN(b)){
+reject("Invalid input. Please enter valid numbers.");
+}
+else{
+
+resolve({
+add: module.add(a,b),
+subtract: module.subtract(a,b),
+multiply: module.multiply(a,b),
+divide: module.divide(a,b)
+});
+
+}
+
+},2000);
+
+});
+
+// Fulfilled
+calculationPromise.then(result=>{
+
+state.innerText="State: Fulfilled";
+state.className="fulfilled";
+
+document.getElementById('addResult').innerText = "Add: " + result.add;
+document.getElementById('subtractResult').innerText = "Subtract: " + result.subtract;
+document.getElementById('multiplyResult').innerText = "Multiply: " + result.multiply;
+document.getElementById('divideResult').innerText = "Divide: " + result.divide;
+
+})
+
+// Rejected
+.catch(error=>{
+
+state.innerText="State: Rejected";
+state.className="rejected";
+
+document.getElementById('addResult').innerText="";
+document.getElementById('subtractResult').innerText="";
+document.getElementById('multiplyResult').innerText="";
+document.getElementById('divideResult').innerText="";
+
+alert(error);
+
+});
+
+}
+
+}).catch(error=>{
+console.error("Error loading module:",error);
+});
+
+</script>
+
+</body>
+</html>
