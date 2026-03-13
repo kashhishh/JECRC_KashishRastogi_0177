@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Dynamic Import Example</title>
+
+<style>
+
+body{
+font-family: Arial;
+padding:40px;
+background:#f5f5f5;
+}
+
+h1{
+margin-bottom:30px;
+}
+
+.container{
+border:1px solid #ccc;
+background:white;
+padding:25px;
+width:420px;
+border-radius:8px;
+}
+
+button{
+margin-top:10px;
+padding:8px 14px;
+cursor:pointer;
+}
+
+.result{
+margin-top:15px;
+font-weight:bold;
+color:blue;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Using Import / Export (Dynamic Module)</h1>
+
+<div class="container">
+
+<p>Click the button to run module functions</p>
+
+<button onclick="runModule()">Run Module</button>
+
+<div id="output" class="result"></div>
+
+</div>
+
+<script type="module">
+
+window.runModule = function(){
+
+const Utils = `
+export const PI = 3.14159;
+
+export function add(a,b){
+return a + b;
+}
+
+export function subtract(a,b){
+return a - b;
+}
+
+export function multiply(a,b){
+return a * b;
+}
+
+export function divide(a,b){
+if(b === 0){
+throw new Error("Cannot divide by zero");
+}
+return a / b;
+}
+`;
+
+const blob = new Blob([Utils], {type:'text/javascript'});
+
+const url = URL.createObjectURL(blob);
+
+import(url).then(module => {
+
+let result = `
+PI: ${module.PI} <br>
+Add: ${module.add(5,3)} <br>
+Subtract: ${module.subtract(5,3)} <br>
+Multiply: ${module.multiply(5,3)} <br>
+Divide: ${module.divide(5,3)}
+`;
+
+document.getElementById("output").innerHTML = result;
+
+}).catch(error => {
+
+console.error("Error loading module:", error);
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
