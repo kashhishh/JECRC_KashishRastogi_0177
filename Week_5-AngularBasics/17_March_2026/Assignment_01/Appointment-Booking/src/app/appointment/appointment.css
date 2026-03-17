@@ -1,0 +1,204 @@
+/* ── PAGE ── */
+.page {
+  min-height: 100vh;
+  background: #f0f4ff;
+}
+
+/* ── TOP BAR ── */
+.topbar {
+  background: #2563eb;
+  color: white;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.topbar h1 { font-size: 22px; }
+.topbar span { font-size: 14px; opacity: 0.8; }
+
+/* ── LAYOUT ── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+
+/* ── CARD ── */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.card h2 { font-size: 22px; color: #1e3a8a; margin-bottom: 4px; }
+.sub { color: #94a3b8; font-size: 13px; margin-bottom: 24px; }
+
+/* ── FORM FIELDS ── */
+.field {
+  margin-bottom: 20px;
+}
+.field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #1e293b;
+  outline: none;
+  transition: border 0.2s;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #2563eb;
+}
+.field textarea { resize: vertical; }
+
+/* ── ERROR ── */
+.err {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #ef4444;
+}
+
+/* ── CONSULTATION TYPE ── */
+.type-row {
+  display: flex;
+  gap: 12px;
+}
+.type-box {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s;
+}
+.type-box:hover { border-color: #2563eb; background: #eff6ff; }
+.active-online  { border-color: #0284c7 !important; background: #e0f2fe !important; color: #0369a1; }
+.active-offline { border-color: #7c3aed !important; background: #f5f3ff !important; color: #6d28d9; }
+
+/* ── SUBMIT BUTTON ── */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+.submit-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+.submit-btn:active { transform: translateY(0); }
+
+/* ── SUMMARY CARD ── */
+.summary-card { position: sticky; top: 24px; }
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+}
+.summary-item span { color: #64748b; }
+.summary-item strong { color: #1e293b; text-align: right; max-width: 55%; }
+
+.fee-row { margin-top: 8px; border-top: 2px solid #e2e8f0; }
+.fee { font-size: 22px; color: #2563eb; font-weight: 700; }
+
+/* ── MODAL ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.modal {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 36px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.tick {
+  width: 64px;
+  height: 64px;
+  background: #22c55e;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.modal h2 { font-size: 22px; color: #1e293b; margin-bottom: 6px; }
+.modal p  { color: #94a3b8; font-size: 14px; margin-bottom: 20px; }
+
+.modal-info {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.mi-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+.mi-row:last-child { border-bottom: none; }
+.mi-row span { color: #94a3b8; }
+.mi-row b    { color: #1e293b; }
+
+.close-btn {
+  width: 100%;
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.close-btn:hover { background: #1d4ed8; }
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; }
+  .summary-card { position: static; }
+}

@@ -1,0 +1,154 @@
+<div class="page">
+
+  <!-- ── TOP BAR ── -->
+  <div class="topbar">
+    <h1>🏥 MediCare</h1>
+    <span>Hospital Appointment System</span>
+  </div>
+
+  <!-- ── MAIN LAYOUT ── -->
+  <div class="layout">
+
+    <!-- ── LEFT: FORM ── -->
+    <div class="card">
+      <h2>Book an Appointment</h2>
+      <p class="sub">Fill the form below to schedule your visit</p>
+
+      <!-- Patient Name -->
+      <div class="field">
+        <label>Patient Name</label>
+        <input
+          type="text"
+          [(ngModel)]="patientName"
+          placeholder="Enter your full name"
+        />
+        <span class="err" *ngIf="submitted && !patientName">
+          ⚠ Please enter your name
+        </span>
+      </div>
+
+      <!-- Doctor -->
+      <div class="field">
+        <label>Select Doctor</label>
+        <select [(ngModel)]="selectedDoctorId">
+          <option value="0" disabled>-- Choose a Doctor --</option>
+          <option *ngFor="let doc of doctors" [value]="doc.id">
+            {{ doc.name }} ({{ doc.specialty }})
+          </option>
+        </select>
+        <span class="err" *ngIf="submitted && !selectedDoctorId">
+          ⚠ Please select a doctor
+        </span>
+      </div>
+
+      <!-- Date -->
+      <div class="field">
+        <label>Appointment Date</label>
+        <input
+          type="date"
+          [(ngModel)]="appointmentDate"
+          [min]="todayDate"
+        />
+        <span class="err" *ngIf="submitted && !appointmentDate">
+          ⚠ Please select a date
+        </span>
+      </div>
+
+      <!-- Consultation Type -->
+      <div class="field">
+        <label>Consultation Type</label>
+        <div class="type-row">
+
+          <label class="type-box" [class.active-online]="consultationType === 'Online'">
+            <input type="radio" [(ngModel)]="consultationType" name="type" value="Online" hidden />
+            🌐 Online — ₹300
+          </label>
+
+          <label class="type-box" [class.active-offline]="consultationType === 'Offline'">
+            <input type="radio" [(ngModel)]="consultationType" name="type" value="Offline" hidden />
+            🏥 Offline — ₹500
+          </label>
+
+        </div>
+        <span class="err" *ngIf="submitted && !consultationType">
+          ⚠ Please choose a type
+        </span>
+      </div>
+
+      <!-- Symptoms -->
+      <div class="field">
+        <label>Symptoms <small>(optional)</small></label>
+        <textarea
+          [(ngModel)]="symptoms"
+          rows="3"
+          placeholder="Describe your symptoms..."
+        ></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button class="submit-btn" (click)="submitForm()">
+        ✅ Confirm Appointment
+      </button>
+
+    </div>
+
+    <!-- ── RIGHT: LIVE SUMMARY ── -->
+    <div class="card summary-card">
+      <h2>📋 Live Summary</h2>
+      <p class="sub">Updates as you fill the form</p>
+
+      <div class="summary-item">
+        <span>👤 Patient</span>
+        <strong>{{ patientName || '—' }}</strong>
+      </div>
+
+      <div class="summary-item">
+        <span>🩺 Doctor</span>
+        <strong>{{ selectedDoctor?.name || '—' }}</strong>
+      </div>
+
+      <div class="summary-item">
+        <span>🔬 Specialty</span>
+        <strong>{{ selectedDoctor?.specialty || '—' }}</strong>
+      </div>
+
+      <div class="summary-item">
+        <span>📅 Date</span>
+        <strong>{{ niceDate || '—' }}</strong>
+      </div>
+
+      <div class="summary-item">
+        <span>💬 Mode</span>
+        <strong>{{ consultationType || '—' }}</strong>
+      </div>
+
+      <div class="summary-item fee-row" *ngIf="consultationType">
+        <span>💰 Fee</span>
+        <strong class="fee">₹{{ fee }}</strong>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ── CONFIRMATION MODAL ── -->
+<div class="overlay" *ngIf="showModal">
+  <div class="modal">
+
+    <div class="tick">✓</div>
+    <h2>Appointment Booked!</h2>
+    <p>Your appointment has been confirmed.</p>
+
+    <div class="modal-info">
+      <div class="mi-row"><span>Patient</span>  <b>{{ patientName }}</b></div>
+      <div class="mi-row"><span>Doctor</span>   <b>{{ selectedDoctor?.name }}</b></div>
+      <div class="mi-row"><span>Date</span>     <b>{{ niceDate }}</b></div>
+      <div class="mi-row"><span>Mode</span>     <b>{{ consultationType }}</b></div>
+      <div class="mi-row"><span>Fee</span>      <b class="fee">₹{{ fee }}</b></div>
+    </div>
+
+    <button class="close-btn" (click)="closeModal()">Done</button>
+
+  </div>
+</div>
