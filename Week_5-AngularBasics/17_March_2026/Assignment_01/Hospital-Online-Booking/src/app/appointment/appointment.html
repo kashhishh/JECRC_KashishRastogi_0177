@@ -1,0 +1,138 @@
+<div class="page-wrapper">
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⚕️</span>
+        <div><span class="logo-title">MediCare</span><span class="logo-sub">Advanced Health System</span></div>
+      </div>
+      <div class="header-badge">Book Appointment</div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="form-section">
+      <div class="section-label">New Appointment</div>
+      <h1 class="form-title">Schedule Your <em>Consultation</em></h1>
+      <p class="form-subtitle">Fill in your details and we'll confirm your slot instantly.</p>
+
+      <form (ngSubmit)="onSubmit()" novalidate>
+
+        <div class="field-group" [class.error]="submitted && !form.patientName.trim()">
+          <label><span class="label-icon">👤</span> Patient Name</label>
+          <input type="text" [(ngModel)]="form.patientName" name="patientName" placeholder="Enter full name" autocomplete="off"/>
+          <span class="error-msg" *ngIf="submitted && !form.patientName.trim()">Patient name is required.</span>
+        </div>
+
+        <div class="field-group" [class.error]="submitted && !form.doctorId">
+          <label><span class="label-icon">🩺</span> Select Doctor</label>
+          <div class="select-wrapper">
+            <select [(ngModel)]="form.doctorId" name="doctorId">
+              <option [ngValue]="null" disabled>Choose a specialist</option>
+              <option *ngFor="let doc of doctors" [ngValue]="doc.id">{{doc.avatar}} {{doc.name}} — {{doc.specialty}}</option>
+            </select>
+            <span class="select-arrow">▾</span>
+          </div>
+          <span class="error-msg" *ngIf="submitted && !form.doctorId">Please select a doctor.</span>
+        </div>
+
+        <div class="field-group" [class.error]="submitted && !form.appointmentDate">
+          <label><span class="label-icon">📅</span> Appointment Date</label>
+          <input type="date" [(ngModel)]="form.appointmentDate" name="appointmentDate" [min]="todayDate"/>
+          <span class="error-msg" *ngIf="submitted && !form.appointmentDate">Please select a date.</span>
+        </div>
+
+        <div class="field-group" [class.error]="submitted && !form.consultationType">
+          <label><span class="label-icon">💬</span> Consultation Type</label>
+          <div class="toggle-row">
+            <label class="toggle-card" [class.active]="form.consultationType==='Online'" [class.online]="form.consultationType==='Online'">
+              <input type="radio" [(ngModel)]="form.consultationType" name="consultationType" value="Online" hidden/>
+              <span class="toggle-icon">🌐</span><span class="toggle-label">Online</span><span class="toggle-fee">₹300</span>
+            </label>
+            <label class="toggle-card" [class.active]="form.consultationType==='Offline'" [class.offline]="form.consultationType==='Offline'">
+              <input type="radio" [(ngModel)]="form.consultationType" name="consultationType" value="Offline" hidden/>
+              <span class="toggle-icon">🏥</span><span class="toggle-label">Offline</span><span class="toggle-fee">₹500</span>
+            </label>
+          </div>
+          <span class="error-msg" *ngIf="submitted && !form.consultationType">Please choose consultation type.</span>
+        </div>
+
+        <div class="field-group">
+          <label><span class="label-icon">📝</span> Symptoms <span class="optional">(Optional)</span></label>
+          <textarea [(ngModel)]="form.symptoms" name="symptoms" rows="4" placeholder="Describe your symptoms briefly…"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" [class.ready]="isFormComplete">
+          <span class="btn-text">Confirm Appointment</span><span class="btn-arrow">→</span>
+        </button>
+      </form>
+    </section>
+
+    <aside class="summary-section">
+      <div class="summary-card" [class.has-data]="summaryReady">
+        <div class="summary-header">
+          <span class="summary-icon">📋</span><span>Live Summary</span><span class="live-badge">LIVE</span>
+        </div>
+        <div class="summary-body" *ngIf="summaryReady">
+          <div class="summary-row" [class.filled]="form.patientName.trim()">
+            <span class="sr-label">Patient</span><span class="sr-value">{{form.patientName.trim()||'—'}}</span>
+          </div>
+          <div class="summary-row" [class.filled]="selectedDoctor">
+            <span class="sr-label">Doctor</span>
+            <span class="sr-value">
+              <ng-container *ngIf="selectedDoctor">{{selectedDoctor.avatar}} {{selectedDoctor.name}}</ng-container>
+              <ng-container *ngIf="!selectedDoctor">—</ng-container>
+            </span>
+          </div>
+          <div class="summary-row" [class.filled]="selectedDoctor">
+            <span class="sr-label">Specialty</span><span class="sr-value">{{selectedDoctor?.specialty||'—'}}</span>
+          </div>
+          <div class="summary-row" [class.filled]="form.appointmentDate">
+            <span class="sr-label">Date</span><span class="sr-value">{{formattedDate||'—'}}</span>
+          </div>
+          <div class="summary-row" [class.filled]="form.consultationType">
+            <span class="sr-label">Mode</span>
+            <span class="sr-value mode-badge" [class.online-badge]="form.consultationType==='Online'" [class.offline-badge]="form.consultationType==='Offline'">
+              {{form.consultationType||'—'}}
+            </span>
+          </div>
+          <div class="summary-divider"></div>
+          <div class="fee-row" *ngIf="form.consultationType">
+            <span class="fee-label">Consultation Fee</span><span class="fee-amount">₹{{consultationFee}}</span>
+          </div>
+          <div class="fee-row" *ngIf="!form.consultationType">
+            <span class="fee-label">Consultation Fee</span><span class="fee-amount muted">Select type</span>
+          </div>
+          <div class="symptoms-preview" *ngIf="form.symptoms.trim()">
+            <span class="sp-label">Symptoms noted ✓</span>
+          </div>
+        </div>
+        <div class="summary-empty" *ngIf="!summaryReady">
+          <span>🩻</span><p>Your appointment details will appear here as you fill the form.</p>
+        </div>
+      </div>
+
+      <div class="doctor-preview" *ngIf="selectedDoctor">
+        <div class="dp-avatar">{{selectedDoctor.avatar}}</div>
+        <div class="dp-info"><span class="dp-name">{{selectedDoctor.name}}</span><span class="dp-spec">{{selectedDoctor.specialty}}</span></div>
+        <div class="dp-check">✓</div>
+      </div>
+    </aside>
+  </main>
+</div>
+
+<!-- Confirmation Modal -->
+<div class="modal-overlay" *ngIf="confirmationVisible" (click)="closeConfirmation()">
+  <div class="modal-card" (click)="$event.stopPropagation()">
+    <div class="modal-success-ring"><span class="modal-tick">✓</span></div>
+    <h2 class="modal-title">Appointment Confirmed!</h2>
+    <p class="modal-sub">Your slot has been successfully booked.</p>
+    <div class="modal-details">
+      <div class="md-row"><span>Patient</span><strong>{{form.patientName}}</strong></div>
+      <div class="md-row"><span>Doctor</span><strong>{{selectedDoctor?.avatar}} {{selectedDoctor?.name}}</strong></div>
+      <div class="md-row"><span>Date</span><strong>{{formattedDate}}</strong></div>
+      <div class="md-row"><span>Mode</span><strong>{{form.consultationType}}</strong></div>
+      <div class="md-row highlight"><span>Fee Payable</span><strong>₹{{consultationFee}}</strong></div>
+    </div>
+    <button class="modal-close-btn" (click)="closeConfirmation()">Done</button>
+  </div>
+</div>
