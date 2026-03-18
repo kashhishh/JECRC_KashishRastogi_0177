@@ -1,0 +1,14 @@
+<div [appTheme]="theme" class="container">
+
+  <h2>🎨 Theme Switcher</h2>
+
+  <button (click)="toggleTheme()" class="toggle-btn">
+    Switch to {{ theme === 'light' ? 'Dark' : 'Light' }} Mode
+  </button>
+
+  <div class="card">
+    <h3>Dashboard Card</h3>
+    <p>This UI changes based on selected theme.</p>
+  </div>
+
+</div>

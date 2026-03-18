@@ -1,0 +1,53 @@
+<div class="container">
+
+  <h2>🚫 Click Block Directive Demo</h2>
+
+  <button (click)="toggleAccess()" class="toggle-btn">
+    {{ isAllowed ? 'Disable Clicks' : 'Enable Clicks' }}
+  </button>
+
+  <p class="status">
+    Status:
+    <span [class.allowed]="isAllowed" [class.blocked-text]="!isAllowed">
+      {{ isAllowed ? 'Allowed ✅' : 'Blocked ❌' }}
+    </span>
+  </p>
+
+  <div class="grid">
+
+    <!-- Card 1 -->
+    <div 
+      class="card"
+      [appClickBlock]="isAllowed"
+      [class.blocked]="!isAllowed"
+      [title]="!isAllowed ? 'Access Denied' : ''"
+      (click)="handleClick('Product 1')"
+    >
+      🛒 Product 1
+    </div>
+
+    <!-- Card 2 -->
+    <div 
+      class="card"
+      [appClickBlock]="isAllowed"
+      [class.blocked]="!isAllowed"
+      [title]="!isAllowed ? 'Access Denied' : ''"
+      (click)="handleClick('Product 2')"
+    >
+      📱 Product 2
+    </div>
+
+    <!-- Card 3 -->
+    <div 
+      class="card"
+      [appClickBlock]="isAllowed"
+      [class.blocked]="!isAllowed"
+      [title]="!isAllowed ? 'Access Denied' : ''"
+      (click)="handleClick('Product 3')"
+    >
+      💻 Product 3
+    </div>
+
+  </div>
+
+</div>

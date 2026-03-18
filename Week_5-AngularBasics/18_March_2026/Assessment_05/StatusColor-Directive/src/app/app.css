@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
+}
+
+/* Container */
+.container {
+  padding: 30px;
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Text */
+h3 {
+  margin: 0 0 10px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+}
+
+.pass {
+  background: green;
+}
+
+.fail {
+  background: red;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+
+  <h2>Current Role: {{ role}}</h2>
+
+  <button (click)="toggleRole()">Switch Role</button>
+
+  <hr>
+
+  <!-- Admin -->
+  <div *appRole="{ role: 'admin', current: role }" class="admin-box">
+    <h3>Admin Panel</h3>
+    <p>👤 Manage Users</p>
+    <p>📊 View Reports</p>
+    <p>⚙️ System Settings</p>
+  </div>
+
+  <!-- User -->
+  <div *appRole="{ role: 'user', current: role }" class="user-box">
+    <h3>User Dashboard</h3>
+    <p>👤 View Profile</p>
+    <p>📅 Book Appointment</p>
+    <p>📁 Check History</p>
+  </div>
+
+</div>

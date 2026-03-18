@@ -1,0 +1,87 @@
+/* Page Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7fb;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Header */
+h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Button */
+button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  background: #4a90e2;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #357abd;
+  transform: translateY(-2px);
+}
+
+/* Card Base */
+.admin-box,
+.user-box {
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+.admin-box:hover,
+.user-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Admin Card */
+.admin-box {
+  border-left: 6px solid #e74c3c;
+}
+
+.admin-box h3 {
+  color: #e74c3c;
+}
+
+/* User Card */
+.user-box {
+  border-left: 6px solid #2ecc71;
+}
+
+.user-box h3 {
+  color: #2ecc71;
+}
+
+/* Text */
+p {
+  margin: 8px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Divider */
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}

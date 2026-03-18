@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: 0.3s;
+}
+
+
+.container {
+  min-height: 100vh;
+  padding: 30px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+
+.toggle-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #6c5ce7;
+  color: white;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  background: #4834d4;
+}
+
+
+.card {
+  margin: 20px auto;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.05);
+  transition: 0.3s;
+}

@@ -1,0 +1,33 @@
+<div class="container">
+
+  <h2>🎓 Student Result Dashboard</h2>
+
+  <div class="grid">
+
+    <div 
+      class="card"
+      *ngFor="let student of students"
+      [appStatusColor]="student.marks"
+    >
+      <h3>{{ student.name }}</h3>
+      <p>Marks: {{ student.marks }}</p>
+
+      <span 
+        class="badge pass" 
+        *ngIf="student.marks >= 50"
+      >
+        ✅ Pass
+      </span>
+
+      <span 
+        class="badge fail" 
+        *ngIf="student.marks < 50"
+      >
+        ❌ Fail
+      </span>
+
+    </div>
+
+  </div>
+
+</div>
