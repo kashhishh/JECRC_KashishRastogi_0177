@@ -1,0 +1,13 @@
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.topper {
+  border: 2px solid gold;
+  background-color: #fff8dc;
+}
