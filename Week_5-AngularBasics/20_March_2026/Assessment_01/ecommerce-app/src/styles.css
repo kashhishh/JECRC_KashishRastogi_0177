@@ -1,0 +1,72 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #f9e4ff);
+  margin: 0;
+}
+
+/* Layout */
+.main-container {
+  padding: 20px;
+}
+
+.top-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(255,105,180,0.2);
+}
+
+.checkout {
+  margin-top: 20px;
+}
+
+/* Buttons */
+button {
+  background: #ff6fa5;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background: #ff4f81;
+}
+
+/* Product */
+.product-card {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* Cart */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select, textarea {
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ffc0cb;
+}

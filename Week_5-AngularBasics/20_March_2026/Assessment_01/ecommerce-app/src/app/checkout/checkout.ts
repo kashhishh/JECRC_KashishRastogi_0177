@@ -1,0 +1,27 @@
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-checkout',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  templateUrl: './checkout.html'
+})
+export class CheckoutComponent {
+
+  user: any = {
+    name: '',
+    email: '',
+    phone: '',
+    gender: '',
+    deliveryType: '',
+    city: '',
+    date: '',
+    instructions: '',
+    payment: '',
+    cardNumber: '',
+    upi: ''
+  };
+
+}

@@ -1,0 +1,12 @@
+<input [(ngModel)]="search" placeholder="Search product">
+<select [(ngModel)]="selectedCategory">
+  <option value="">All</option>
+  <option>Electronics</option>
+  <option>Fashion</option>
+</select>
+
+<div *ngFor="let p of filteredProducts()">
+  <h3>{{p.name}}</h3>
+  <p>₹{{p.price}}</p>
+  <button (click)="add(p)">Add to Cart</button>
+</div>
