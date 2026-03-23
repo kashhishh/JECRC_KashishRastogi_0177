@@ -1,0 +1,62 @@
+/* 🌈 Background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+}
+
+/* 🌸 Wrapper */
+.app-wrapper {
+  padding: 20px;
+}
+
+/* ✨ Title */
+.title {
+  text-align: center;
+  color: #ff4d6d;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* 🧱 Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* 📦 Card Design */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+/* 🌟 Hover Effect */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🎀 Section Titles */
+.card h2 {
+  color: #ff4d6d;
+  margin-bottom: 10px;
+}
+
+/* 💳 Checkout Full Width */
+.checkout {
+  grid-column: span 2;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout {
+    grid-column: span 1;
+  }
+}

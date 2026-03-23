@@ -1,0 +1,117 @@
+/* 🌈 Global background */
+body {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🌸 Container */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ✨ Heading */
+h1 {
+  text-align: center;
+  color: #ff6f91;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* 💖 Input box */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #ff6f91;
+  box-shadow: 0 0 8px rgba(255, 111, 145, 0.3);
+}
+
+/* 🎀 Button */
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+/* 📦 Cards for output */
+.card {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  background: #fff0f5;
+  box-shadow: 0 5px 15px rgba(255, 111, 145, 0.15);
+}
+
+/* 🔥 Section titles */
+.section-title {
+  color: #ff6f91;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* 📊 List style */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin: 5px 0;
+  color: #444;
+}
+
+/* ⏳ Loader */
+.loader {
+  text-align: center;
+  color: #ff6f91;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* 🌟 Smooth animation */
+.card:hover {
+  transform: translateY(-3px);
+  transition: 0.3s;
+}.container {
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial;
+}
+
+input {
+  width: 60%;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}

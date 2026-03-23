@@ -1,0 +1,40 @@
+/* 🛍 Product Card */
+.product {
+  background: #ffffff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+/* 🏷 Product Name */
+.product h3 {
+  margin: 0;
+  color: #333;
+}
+
+/* 💰 Price */
+.product p {
+  margin: 5px 0;
+  color: #777;
+}
+
+/* ➕ Add Button */
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
