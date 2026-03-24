@@ -7,6 +7,7 @@ import {Contact} from './contact/contact';
 export const routes: Routes = [
     {path: '', component: Home},
     {path: 'products', component: ProductComponent},
+    {path: 'product/:id', loadComponent: () => import('./product-detail/product-detail').then(m => m.ProductDetail)},
     {path: 'contact', component: Contact},
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: '**', component: Error},
