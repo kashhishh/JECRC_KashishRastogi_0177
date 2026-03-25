@@ -1,0 +1,30 @@
+<div class="page">
+  <div class="page-header">
+    <h2>Our Products</h2>
+    <a routerLink="/cart" class="view-cart-btn">
+      View Cart ({{ getCartCount() }})
+    </a>
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of products">
+      <div class="product-emoji">{{ product.emoji }}</div>
+      <div class="product-info">
+        <h3>{{ product.name }}</h3>
+        <p class="product-desc">{{ product.description }}</p>
+        <div class="product-footer">
+          <span class="price">${{ product.price }}</span>
+          <div class="qty-badge" *ngIf="isInCart(product.id)">
+            x{{ getItemQuantity(product.id) }} in cart
+          </div>
+        </div>
+      </div>
+      <button
+        class="add-btn"
+        [class.added]="addedIds.has(product.id)"
+        (click)="addToCart(product)">
+        {{ addedIds.has(product.id) ? '✓ Added!' : 'Add to Cart' }}
+      </button>
+    </div>
+  </div>
+</div>

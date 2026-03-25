@@ -1,0 +1,172 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f6fa;
+  color: #333;
+}
+
+h1 {
+  padding: 16px 24px 0;
+  color: #333;
+  font-size: 22px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 10px 0 0;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+  padding: 14px 24px;
+  background: #4a90e2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.container {
+  max-width: 720px;
+  margin: 30px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+input[type="text"]:focus,
+input:not([type="checkbox"]):focus {
+  border-color: #4a90e2;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: background 0.2s;
+}
+
+button:first-of-type {
+  background: #4a90e2;
+  color: white;
+  margin-right: 8px;
+}
+
+button:first-of-type:hover {
+  background: #357abd;
+}
+
+button:not(:first-of-type) {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+button:not(:first-of-type):hover {
+  background: #e0e0e0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background: #f9f9fb;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 14px;
+  gap: 10px;
+}
+
+li span {
+  flex: 1;
+  color: #333;
+}
+
+li button {
+  padding: 6px 12px;
+  font-size: 13px;
+  margin-right: 0;
+}
+
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.search-bar input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.search-bar button:first-of-type {
+  background: #4a90e2;
+  color: white;
+}
+
+.search-bar button:not(:first-of-type) {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}

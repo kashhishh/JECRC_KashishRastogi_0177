@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Task List</h2>
+
+  <div class="search-bar">
+    <input [(ngModel)]="searchText" placeholder="Search task..." name="search" (keyup.enter)="search()" />
+    <button (click)="search()">Search</button>
+    <button (click)="searchText = ''; loadTasks()">Clear</button>
+  </div>
+
+  <div *ngIf="tasks.length === 0" style="color: #999; padding: 20px 0;">
+    No tasks found.
+  </div>
+
+  <ul *ngIf="tasks.length > 0">
+    <li *ngFor="let task of tasks">
+      <span [style.text-decoration]="task.completed ? 'line-through' : 'none'">
+        {{ task.title }}
+      </span>
+
+      <button (click)="toggleStatus(task)">
+        {{ task.completed ? 'Undo' : 'Done' }}
+      </button>
+
+      <button (click)="deleteTask(task.id!)">Delete</button>
+    </li>
+  </ul>
+</div>

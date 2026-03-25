@@ -1,0 +1,174 @@
+.container {
+  max-width: 750px;
+  margin: 30px auto;
+  padding: 24px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+  margin: 0;
+}
+
+.btn-add {
+  padding: 10px 18px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-add:hover {
+  background: #357abd;
+}
+
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border-color: #4a90e2;
+}
+
+.btn-search {
+  padding: 10px 16px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-search:hover {
+  background: #357abd;
+}
+
+.btn-clear {
+  padding: 10px 16px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-clear:hover {
+  background: #e0e0e0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: background 0.2s;
+}
+
+li.completed {
+  background: #f9f9f9;
+  opacity: 0.8;
+}
+
+.task-title {
+  font-size: 15px;
+  color: #333;
+  flex: 1;
+}
+
+.task-title.strikethrough {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-done {
+  background: #e6f4ea;
+  color: #2e7d32;
+}
+
+.badge-pending {
+  background: #fff8e1;
+  color: #f57f17;
+}
+
+.btn-toggle {
+  padding: 6px 12px;
+  background: #eaf0fb;
+  color: #4a90e2;
+  border: 1px solid #c3d8f5;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-toggle:hover {
+  background: #d0e4f7;
+}
+
+.btn-delete {
+  padding: 6px 12px;
+  background: #fdecea;
+  color: #c62828;
+  border: 1px solid #f5c6c6;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-delete:hover {
+  background: #f9d0ce;
+}
+
+.loading {
+  text-align: center;
+  color: #888;
+  padding: 30px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #aaa;
+  padding: 40px;
+  font-size: 16px;
+}
