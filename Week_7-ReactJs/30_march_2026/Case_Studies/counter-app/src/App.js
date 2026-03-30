@@ -1,6 +1,8 @@
 
 import './App.css';
 import Counter from './components/counter';
+import StateVsPropsDemo from './components/StateVsPropsDemo';
+import TemperatureConverter from './components/TemperatureConverter';
 
 /*function App() {
   return (
@@ -21,15 +23,37 @@ import Counter from './components/counter';
       </header>
     </div>
   );
-} */
+} 
+
+// This is the main App component that renders the Counter component. You can replace Counter with StateVsPropsDemo to see the state vs props demonstration in action.
+
 function App() {
   return (
     <div>
       <Counter />
     </div>
   );
-}
+}*/
 
+// This is the main App component that renders the StateVsPropsDemo component to demonstrate the difference between state and props.
+/*
+function App() {
+  return (
+    <div>
+      <StateVsPropsDemo />
+    </div>
+  );
+}*/
+
+/// This is the main App component that renders the TemperatureConverter component to demonstrate lifting state up in React.
+
+function App() {
+  return (
+    <div>
+      <TemperatureConverter />
+    </div>
+  );
+}
 export default App;
 
 
