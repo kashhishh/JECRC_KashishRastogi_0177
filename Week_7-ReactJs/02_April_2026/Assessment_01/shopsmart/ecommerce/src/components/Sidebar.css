@@ -1,0 +1,33 @@
+.sidebar {
+  background-color: #f8f9fa;
+  padding: 2rem 1rem;
+  border-right: 1px solid #ddd;
+  min-height: calc(100vh - 60px);
+}
+
+.sidebar h3 {
+  margin-bottom: 1.5rem;
+  color: #282c34;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu a {
+  color: #282c34;
+  padding: 0.75rem 1rem;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+  background-color: #e9ecef;
+  color: #61dafb;
+}
