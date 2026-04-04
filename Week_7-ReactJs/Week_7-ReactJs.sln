@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_April_2026", "04_April_2026", "{A7AC4C33-C351-98C6-C879-AA1E96DF21E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assessment_01", "Assessment_01", "{0BE2C576-6DCB-A78B-6CCE-480A1055A5E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BillGenerator", "BillGenerator", "{37B692C0-F9DA-DA8B-6959-D0011A5C8353}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillGenerator.API", "04_April_2026\Assessment_01\BillGenerator\BillGenerator.API\BillGenerator.API.csproj", "{AE6829C0-4BE7-F6C7-E9E3-A5C0BB513775}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE6829C0-4BE7-F6C7-E9E3-A5C0BB513775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE6829C0-4BE7-F6C7-E9E3-A5C0BB513775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE6829C0-4BE7-F6C7-E9E3-A5C0BB513775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE6829C0-4BE7-F6C7-E9E3-A5C0BB513775}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0BE2C576-6DCB-A78B-6CCE-480A1055A5E1} = {A7AC4C33-C351-98C6-C879-AA1E96DF21E5}
+		{37B692C0-F9DA-DA8B-6959-D0011A5C8353} = {0BE2C576-6DCB-A78B-6CCE-480A1055A5E1}
+		{AE6829C0-4BE7-F6C7-E9E3-A5C0BB513775} = {37B692C0-F9DA-DA8B-6959-D0011A5C8353}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A09D767D-66FB-4876-8B7F-3BAF4E19EECC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,72 @@
+:root {
+  --primary: #d946ef;
+  --primary-light: #ec4899;
+  --primary-dark: #be185d;
+  --secondary: #f472b6;
+  --accent: #fbcfe8;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --border-color: #f3e8ff;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --shadow: 0 4px 6px rgba(217, 70, 239, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+@media print {
+  body {
+    background-color: white;
+  }
+  .navbar, .main-content > div:not(.invoice-section), .bill-actions {
+    display: none !important;
+  }
+  .invoice-section {
+    box-shadow: none;
+    padding: 0;
+  }
+}

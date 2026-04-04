@@ -1,0 +1,215 @@
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard h1 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-left: 4px solid;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(217, 70, 239, 0.15);
+}
+
+.stat-card.primary {
+  border-left-color: var(--primary);
+  background: linear-gradient(135deg, rgba(217, 70, 239, 0.05) 0%, var(--accent) 100%);
+}
+
+.stat-card.secondary {
+  border-left-color: var(--secondary);
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.05) 0%, rgba(236, 72, 153, 0.03) 100%);
+}
+
+.stat-card.tertiary {
+  border-left-color: #3b82f6;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
+}
+
+.stat-card.quaternary {
+  border-left-color: #10b981;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(16, 185, 129, 0.02) 100%);
+}
+
+.stat-card.quinary {
+  border-left-color: #f59e0b;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(245, 158, 11, 0.02) 100%);
+}
+
+.stat-icon {
+  font-size: 2rem;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.stat-card.primary .stat-value {
+  color: var(--primary);
+}
+
+.stat-card.secondary .stat-value {
+  color: var(--secondary);
+}
+
+.stat-card.tertiary .stat-value {
+  color: #3b82f6;
+}
+
+.stat-card.quaternary .stat-value {
+  color: #10b981;
+}
+
+.stat-card.quinary .stat-value {
+  color: #f59e0b;
+}
+
+.top-items-section {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--accent);
+}
+
+.top-items-section h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.top-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.top-item {
+  background: linear-gradient(135deg, var(--accent) 0%, rgba(236, 72, 153, 0.05) 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.top-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(217, 70, 239, 0.2);
+}
+
+.rank {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin: 0 auto 0.75rem;
+}
+
+.top-item h3 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.quantity {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.revenue {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--accent) 0%, rgba(236, 72, 153, 0.05) 100%);
+  border-radius: 8px;
+  border: 2px dashed var(--primary);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.empty-title {
+  color: var(--primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.empty-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .top-items-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .top-items-section {
+    padding: 1rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+}

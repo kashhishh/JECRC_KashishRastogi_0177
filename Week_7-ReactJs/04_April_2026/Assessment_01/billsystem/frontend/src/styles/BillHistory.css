@@ -1,0 +1,317 @@
+.bill-history {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bill-history h1 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.daily-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: linear-gradient(135deg, var(--accent) 0%, rgba(236, 72, 153, 0.05) 100%);
+  border-left: 4px solid var(--primary);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.summary-card .label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.summary-card .value {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.filter-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.search-input, .date-input {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.75rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.search-input:focus, .date-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.1);
+}
+
+.btn-export {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-export:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 70, 239, 0.3);
+}
+
+.bills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.bills-list {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  height: fit-content;
+}
+
+.bills-list h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.bill-item {
+  background: linear-gradient(135deg, var(--accent) 0%, rgba(236, 72, 153, 0.05) 100%);
+  border: 2px solid var(--border-color);
+  border-left: 4px solid var(--primary);
+  padding: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bill-item:hover {
+  border-color: var(--primary);
+  transform: translateX(4px);
+  box-shadow: 0 4px 8px rgba(217, 70, 239, 0.2);
+}
+
+.bill-item.active {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white;
+  border-color: var(--primary-dark);
+}
+
+.bill-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.bill-item h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.bill-amount {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.bill-date {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 0.25rem;
+}
+
+.bill-items {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.bill-item.active .bill-date,
+.bill-item.active .bill-items {
+  color: white;
+}
+
+.no-bills {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 2rem;
+  font-style: italic;
+}
+
+.bill-detail {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--accent);
+  height: fit-content;
+}
+
+.bill-detail h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.detail-header h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+
+.detail-header .date {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.detail-table thead {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.detail-table th {
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary);
+}
+
+.detail-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-table tbody tr:hover {
+  background-color: var(--accent);
+}
+
+.detail-totals {
+  background: linear-gradient(135deg, var(--accent) 0%, rgba(236, 72, 153, 0.05) 100%);
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--primary);
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.total-row.final {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border-bottom: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-print, .btn-delete {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-print {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+}
+
+.btn-print:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.btn-delete {
+  background-color: var(--danger);
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+@media (max-width: 768px) {
+  .bills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-section {
+    flex-direction: column;
+  }
+
+  .search-input, .date-input, .btn-export {
+    width: 100%;
+  }
+
+  .detail-table {
+    font-size: 0.9rem;
+  }
+
+  .detail-table th, .detail-table td {
+    padding: 0.5rem;
+  }
+}
