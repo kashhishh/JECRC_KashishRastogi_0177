@@ -1,0 +1,156 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Admission",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5289
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/admission",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "SwaggerKey": "admission"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Admission/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5289
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/admission/{id}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
+      "SwaggerKey": "admission"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Admission/{id}/status",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5289
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/admission/{id}/status",
+      "UpstreamHttpMethod": [ "PATCH" ],
+      "SwaggerKey": "admission"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Attendance",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5084
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/attendance",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "SwaggerKey": "attendance"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Attendance/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5084
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/attendance/{id}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
+      "SwaggerKey": "attendance"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Attendance/student/{studentId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5084
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/attendance/student/{studentId}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "attendance"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Student",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5062
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/student",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "SwaggerKey": "student"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Student/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5062
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/student/{id}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
+      "SwaggerKey": "student"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Student/active",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5062
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/student/active",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "student"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "admission",
+      "Config": [
+        {
+          "Name": "Student Admission API - v1",
+          "Version": "v1",
+          "Url": "http://localhost:5289/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "attendance",
+      "Config": [
+        {
+          "Name": "Student Attendance API - v1",
+          "Version": "v1",
+          "Url": "http://localhost:5084/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "student",
+      "Config": [
+        {
+          "Name": "Student Management API - v1",
+          "Version": "v1",
+          "Url": "http://localhost:5062/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5055"
+  }
+}

@@ -1,0 +1,27 @@
+# Build folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Database / cache
+*.db
+*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
+
+.vs/
+
+run-logs/
