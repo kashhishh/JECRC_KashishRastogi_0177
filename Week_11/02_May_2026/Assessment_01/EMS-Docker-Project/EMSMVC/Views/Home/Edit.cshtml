@@ -1,0 +1,14 @@
+@model EMSMVC.Models.Employee
+
+<h2>Edit Employee</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <input asp-for="Name" class="form-control" />
+    <input asp-for="Department" class="form-control mt-2" />
+    <input asp-for="Email" class="form-control mt-2" />
+    <input asp-for="Salary" class="form-control mt-2" />
+
+    <button type="submit" class="btn btn-success mt-3">Update</button>
+</form>

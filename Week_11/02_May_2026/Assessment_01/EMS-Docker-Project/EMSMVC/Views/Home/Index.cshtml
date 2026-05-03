@@ -1,0 +1,36 @@
+﻿@model List<EMSMVC.Models.Employee>
+
+<h2 class="text-center text-primary">Employee Dashboard</h2>
+
+<div class="mb-3">
+    <a href="/Home/Create" class="btn btn-primary">Add Employee</a>
+</div>
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Department</td>
+            <td>@item.Email</td>
+            <td>@item.Salary</td>
+            <td>
+                <a href="/Home/Edit/@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/Home/Delete/@item.Id" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+@model EMSMVC.Models.Employee
+
+<h2>Add Employee</h2>
+
+<form asp-action="Create" method="post">
+    <input asp-for="Name" class="form-control" placeholder="Name" />
+    <input asp-for="Department" class="form-control mt-2" placeholder="Department" />
+    <input asp-for="Email" class="form-control mt-2" placeholder="Email" />
+    <input asp-for="Salary" class="form-control mt-2" placeholder="Salary" />
+
+    <button type="submit" class="btn btn-success mt-3">Save</button>
+</form>

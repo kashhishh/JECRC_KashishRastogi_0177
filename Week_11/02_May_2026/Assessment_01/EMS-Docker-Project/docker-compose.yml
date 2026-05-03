@@ -1,0 +1,30 @@
+services:
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "Your_password123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1434:1433"
+
+  emswebapi:
+    build: ./EMSWebAPI
+    container_name: emswebapi
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "5000:80"
+    depends_on:
+      - sqlserver
+
+  emsmvc:
+    build: ./EMSMVC
+    container_name: emsmvc
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "5001:80"
+    depends_on:
+      - emswebapi
