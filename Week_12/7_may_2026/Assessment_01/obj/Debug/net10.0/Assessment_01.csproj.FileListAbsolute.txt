@@ -1,0 +1,15 @@
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\bin\Debug\net10.0\Assessment_01.exe
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\bin\Debug\net10.0\Assessment_01.deps.json
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\bin\Debug\net10.0\Assessment_01.runtimeconfig.json
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\bin\Debug\net10.0\Assessment_01.dll
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\bin\Debug\net10.0\Assessment_01.pdb
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\obj\Debug\net10.0\Assessment_01.GeneratedMSBuildEditorConfig.editorconfig
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\obj\Debug\net10.0\Assessment_01.AssemblyInfoInputs.cache
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\obj\Debug\net10.0\Assessment_01.AssemblyInfo.cs
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\obj\Debug\net10.0\Assessment_01.csproj.CoreCompileInputs.cache
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\obj\Debug\net10.0\Assessment_01.sourcelink.json
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\obj\Debug\net10.0\Assessment_01.dll
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\obj\Debug\net10.0\refint\Assessment_01.dll
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\obj\Debug\net10.0\Assessment_01.pdb
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\obj\Debug\net10.0\Assessment_01.genruntimeconfig.cache
+D:\Capgemini_Training\Week_12\7_may_2026\Assessment_01\obj\Debug\net10.0\ref\Assessment_01.dll
