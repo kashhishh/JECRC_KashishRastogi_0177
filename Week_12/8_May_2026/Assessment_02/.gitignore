@@ -1,0 +1,29 @@
+## ─── VS Code ────────────────────────────────────────────
+.vscode/
+!.vscode/extensions.json    # keep if you want to share recommended extensions
+
+## ─── C# / .NET Build Output ────────────────────────────
+bin/
+obj/
+
+## ─── .NET Runtime Files ─────────────────────────────────
+*.user
+project.lock.json
+project.fragment.lock.json
+artifacts/
+publish/
+
+## ─── NuGet ──────────────────────────────────────────────
+*.nupkg
+*.snupkg
+packages/
+
+## ─── OS Files ───────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## ─── Logs & Test Results ────────────────────────────────
+*.log
+TestResults/
+*.trx
