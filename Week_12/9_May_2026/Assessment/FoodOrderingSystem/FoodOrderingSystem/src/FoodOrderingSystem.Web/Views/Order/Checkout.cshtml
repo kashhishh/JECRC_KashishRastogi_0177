@@ -1,0 +1,68 @@
+@model FoodOrderingSystem.Core.ViewModels.CheckoutViewModel
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<div class="container py-4">
+    <h2 class="fw-bold mb-4"><i class="bi bi-credit-card me-2 text-danger"></i>Checkout</h2>
+
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3">Delivery Details</h5>
+                    <form asp-action="Checkout" method="post">
+                        @Html.AntiForgeryToken()
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="DeliveryAddress" class="form-label fw-semibold"></label>
+                            <textarea asp-for="DeliveryAddress" class="form-control" rows="3" placeholder="Enter full delivery address..."></textarea>
+                            <span asp-validation-for="DeliveryAddress" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Notes" class="form-label fw-semibold">Special Instructions (Optional)</label>
+                            <textarea asp-for="Notes" class="form-control" rows="2" placeholder="E.g. Extra sauce, no onions..."></textarea>
+                        </div>
+
+                        <!-- Mock Payment Notice -->
+                        <div class="alert alert-info d-flex align-items-center">
+                            <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+                            <div>
+                                <strong>Mock Checkout:</strong> No real payment is processed.
+                                Click "Place Order" to confirm your order.
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-danger w-100 py-2 fw-bold btn-lg">
+                            <i class="bi bi-bag-check me-2"></i>Place Order ($@Model.TotalAmount.ToString("F2"))
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3">Order Summary</h5>
+                    @foreach (var item in Model.CartItems)
+                    {
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>@item.FoodItemName <span class="text-muted">x@item.Quantity</span></span>
+                            <span>$@item.SubTotal.ToString("F2")</span>
+                        </div>
+                    }
+                    <hr />
+                    <div class="d-flex justify-content-between">
+                        <strong>Total</strong>
+                        <strong class="text-danger fs-5">$@Model.TotalAmount.ToString("F2")</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

@@ -1,0 +1,111 @@
+@{
+    ViewData["Title"] = "Welcome to FoodieExpress";
+    var categories = ViewBag.Categories as IEnumerable<FoodOrderingSystem.Core.Entities.Category> ?? Enumerable.Empty<FoodOrderingSystem.Core.Entities.Category>();
+    var featured = ViewBag.FeaturedItems as IEnumerable<FoodOrderingSystem.Core.Entities.FoodItem> ?? Enumerable.Empty<FoodOrderingSystem.Core.Entities.FoodItem>();
+}
+
+<!-- Hero Section -->
+<section class="bg-danger text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h1 class="display-4 fw-bold mb-3">Delicious Food,<br/>Delivered Fast 🍕</h1>
+                <p class="lead mb-4">Order from the best local restaurants. Fresh, hot, and right to your door.</p>
+                <a asp-controller="Food" asp-action="Index" class="btn btn-warning btn-lg text-dark fw-bold px-5">
+                    <i class="bi bi-bag-fill me-2"></i>Order Now
+                </a>
+            </div>
+            <div class="col-md-5 text-center d-none d-md-block">
+                <span style="font-size:180px;">🍔</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4">Browse by Category</h2>
+        <div class="row g-3 justify-content-center">
+            @foreach (var cat in categories)
+            {
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a asp-controller="Food" asp-action="Index" asp-route-categoryId="@cat.Id"
+                       class="card text-center border-0 shadow-sm text-decoration-none h-100 category-card">
+                        <div class="card-body py-3">
+                            <div class="fs-1 mb-2">
+                                @(cat.Name switch {
+                                    "Burgers" => "🍔",
+                                    "Pizza" => "🍕",
+                                    "Pasta" => "🍝",
+                                    "Beverages" => "🥤",
+                                    "Desserts" => "🍰",
+                                    _ => "🍽️"
+                                })
+                            </div>
+                            <p class="mb-0 fw-semibold text-dark">@cat.Name</p>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Featured Items -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4">Featured Items</h2>
+        <div class="row g-4">
+            @foreach (var item in featured)
+            {
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm food-card">
+                        @if (item.ImagePath != null)
+                        {
+                            <img src="@item.ImagePath" class="card-img-top food-img" alt="@item.Name" />
+                        }
+                        else
+                        {
+                            <div class="food-img-placeholder bg-light d-flex align-items-center justify-content-center">
+                                <span style="font-size:64px">🍽️</span>
+                            </div>
+                        }
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="card-title mb-1">@item.Name</h5>
+                                <span class="badge bg-danger fs-6">$@item.Price.ToString("F2")</span>
+                            </div>
+                            <p class="card-text text-muted small">@item.Description</p>
+                            <span class="badge bg-secondary">@item.Category?.Name</span>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            @if (User.Identity?.IsAuthenticated == true)
+                            {
+                                <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="foodItemId" value="@item.Id" />
+                                    <input type="hidden" name="quantity" value="1" />
+                                    <button type="submit" class="btn btn-danger w-100">
+                                        <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                                    </button>
+                                </form>
+                            }
+                            else
+                            {
+                                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-danger w-100">
+                                    Login to Order
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="text-center mt-4">
+            <a asp-controller="Food" asp-action="Index" class="btn btn-outline-danger btn-lg">
+                View Full Menu <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,74 @@
+@model IEnumerable<FoodOrderingSystem.Core.Entities.Category>
+@{
+    ViewData["Title"] = "Manage Categories";
+}
+
+<div class="container py-4">
+    <h2 class="fw-bold mb-4"><i class="bi bi-tags-fill me-2 text-warning"></i>Categories</h2>
+
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="fw-bold mb-3">Add New Category</h5>
+                    <form asp-action="CreateCategory" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Name</label>
+                            <input name="name" class="form-control" placeholder="e.g. Salads" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Description</label>
+                            <input name="description" class="form-control" placeholder="Optional description" />
+                        </div>
+                        <button type="submit" class="btn btn-warning text-dark fw-bold">
+                            <i class="bi bi-plus-lg me-1"></i>Add Category
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-0">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var cat in Model)
+                            {
+                                <tr>
+                                    <td class="align-middle fw-semibold">@cat.Name</td>
+                                    <td class="align-middle text-muted small">@cat.Description</td>
+                                    <td class="align-middle">
+                                        @if (cat.IsActive)
+                                        { <span class="badge bg-success">Active</span> }
+                                        else
+                                        { <span class="badge bg-secondary">Inactive</span> }
+                                    </td>
+                                    <td class="align-middle">
+                                        <form asp-action="DeleteCategory" method="post" class="d-inline"
+                                              onsubmit="return confirm('Delete @cat.Name?')">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@cat.Id" />
+                                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

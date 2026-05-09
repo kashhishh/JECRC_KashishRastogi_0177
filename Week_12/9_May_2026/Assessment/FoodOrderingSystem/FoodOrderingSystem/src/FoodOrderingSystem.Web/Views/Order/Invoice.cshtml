@@ -1,0 +1,110 @@
+@model FoodOrderingSystem.Core.ViewModels.OrderViewModel
+@{
+    ViewData["Title"] = $"Invoice #{Model.Id}";
+}
+
+<div class="container py-4">
+    <div class="card border-0 shadow" id="invoice">
+        <div class="card-body p-5">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-start mb-4">
+                <div>
+                    <h2 class="fw-bold text-danger mb-1"><i class="bi bi-basket2-fill me-2"></i>FoodieExpress</h2>
+                    <p class="text-muted small mb-0">Online Food Ordering</p>
+                </div>
+                <div class="text-end">
+                    <h4 class="fw-bold">INVOICE</h4>
+                    <p class="mb-0 text-muted">#@Model.Id</p>
+                    <p class="mb-0 text-muted small">@Model.OrderedAt.ToString("dd MMM yyyy")</p>
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- Customer & Delivery -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h6 class="text-muted text-uppercase small fw-bold mb-2">Customer</h6>
+                    <p class="mb-0 fw-semibold">@Model.UserName</p>
+                    <p class="mb-0 text-muted">@Model.UserEmail</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h6 class="text-muted text-uppercase small fw-bold mb-2">Delivery Address</h6>
+                    <p class="mb-0">@Model.DeliveryAddress</p>
+                    @if (!string.IsNullOrEmpty(Model.Notes))
+                    {
+                        <p class="text-muted small mt-1">Note: @Model.Notes</p>
+                    }
+                </div>
+            </div>
+
+            <!-- Items Table -->
+            <table class="table table-bordered">
+                <thead class="table-danger">
+                    <tr>
+                        <th>Item</th>
+                        <th class="text-center">Qty</th>
+                        <th class="text-end">Unit Price</th>
+                        <th class="text-end">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.OrderItems)
+                    {
+                        <tr>
+                            <td>@item.FoodItemName</td>
+                            <td class="text-center">@item.Quantity</td>
+                            <td class="text-end">$@item.UnitPrice.ToString("F2")</td>
+                            <td class="text-end">$@item.SubTotal.ToString("F2")</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-end fw-bold">Delivery</td>
+                        <td class="text-end text-success">Free</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td colspan="3" class="text-end fw-bold fs-5">Total</td>
+                        <td class="text-end fw-bold text-danger fs-5">$@Model.TotalAmount.ToString("F2")</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <!-- Status -->
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <div>
+                    <strong>Status: </strong>
+                    @{
+                        var badge = Model.Status switch {
+                            FoodOrderingSystem.Core.Enums.OrderStatus.Delivered => "bg-success",
+                            FoodOrderingSystem.Core.Enums.OrderStatus.Cancelled => "bg-danger",
+                            FoodOrderingSystem.Core.Enums.OrderStatus.Pending => "bg-warning text-dark",
+                            _ => "bg-info text-dark"
+                        };
+                    }
+                    <span class="badge @badge fs-6">@Model.StatusDisplay</span>
+                </div>
+                <p class="text-muted small mb-0">Thank you for ordering with FoodieExpress!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4 d-print-none">
+        <button onclick="window.print()" class="btn btn-danger me-2">
+            <i class="bi bi-printer me-1"></i>Print Invoice
+        </button>
+        <a asp-action="History" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left me-1"></i>Back to Orders
+        </a>
+    </div>
+</div>
+
+@section Scripts {
+    <style>
+        @@media print {
+            nav, footer, .d-print-none { display: none !important; }
+            .card { box-shadow: none !important; border: 1px solid #ddd !important; }
+        }
+    </style>
+}

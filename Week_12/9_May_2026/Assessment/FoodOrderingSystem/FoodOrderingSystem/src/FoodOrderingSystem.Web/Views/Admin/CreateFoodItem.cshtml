@@ -1,0 +1,70 @@
+@model FoodOrderingSystem.Web.Models.FoodItemWebViewModel
+@{
+    ViewData["Title"] = "Add Food Item";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h4 class="fw-bold mb-4"><i class="bi bi-plus-circle me-2 text-danger"></i>Add Food Item</h4>
+
+                    <form asp-action="CreateFoodItem" method="post" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-semibold"></label>
+                            <input asp-for="Name" class="form-control" placeholder="e.g. Classic Burger" />
+                            <span asp-validation-for="Name" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label fw-semibold"></label>
+                            <textarea asp-for="Description" class="form-control" rows="2" placeholder="Describe the food item..."></textarea>
+                            <span asp-validation-for="Description" class="text-danger small"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Price" class="form-label fw-semibold"></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input asp-for="Price" class="form-control" placeholder="0.00" />
+                                </div>
+                                <span asp-validation-for="Price" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="CategoryId" class="form-label fw-semibold"></label>
+                                <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-select">
+                                    <option value="">-- Select Category --</option>
+                                </select>
+                                <span asp-validation-for="CategoryId" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ImageFile" class="form-label fw-semibold"></label>
+                            <input asp-for="ImageFile" type="file" class="form-control" accept="image/*" />
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input asp-for="IsAvailable" class="form-check-input" />
+                            <label asp-for="IsAvailable" class="form-check-label fw-semibold">Available for order</label>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-danger">
+                                <i class="bi bi-check-lg me-1"></i>Create Item
+                            </button>
+                            <a asp-action="FoodItems" class="btn btn-outline-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

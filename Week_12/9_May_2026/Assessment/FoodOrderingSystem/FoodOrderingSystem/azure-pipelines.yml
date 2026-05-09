@@ -1,0 +1,180 @@
+# ════════════════════════════════════════════════════════════════
+#  Azure DevOps CI/CD Pipeline — FoodOrderingSystem
+#  Builds, tests, publishes artefacts, and builds Docker images.
+# ════════════════════════════════════════════════════════════════
+
+trigger:
+  branches:
+    include:
+      - main
+      - develop
+  paths:
+    exclude:
+      - '*.md'
+      - 'docs/**'
+
+pr:
+  branches:
+    include:
+      - main
+
+variables:
+  buildConfiguration: 'Release'
+  dotnetVersion: '9.x'
+  imageRegistry: '$(dockerRegistryServiceConnection)'
+  webImageName: 'foodordering-web'
+  apiImageName: 'foodordering-api'
+  tag: '$(Build.BuildId)'
+
+stages:
+
+# ── Stage 1: Build & Test ─────────────────────────────────────
+- stage: Build
+  displayName: 'Build & Test'
+  jobs:
+  - job: BuildAndTest
+    displayName: 'Build and Test .NET Solution'
+    pool:
+      vmImage: 'ubuntu-latest'
+
+    steps:
+    - task: UseDotNet@2
+      displayName: 'Use .NET $(dotnetVersion)'
+      inputs:
+        version: $(dotnetVersion)
+        includePreviewVersions: false
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore NuGet Packages'
+      inputs:
+        command: 'restore'
+        projects: '**/*.csproj'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Build Solution'
+      inputs:
+        command: 'build'
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --no-restore'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Run Tests'
+      inputs:
+        command: 'test'
+        projects: '**/*Tests.csproj'
+        arguments: '--configuration $(buildConfiguration) --no-build --collect:"XPlat Code Coverage"'
+      continueOnError: true
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish Web App'
+      inputs:
+        command: 'publish'
+        publishWebProjects: false
+        projects: 'src/FoodOrderingSystem.Web/FoodOrderingSystem.Web.csproj'
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/web'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish API'
+      inputs:
+        command: 'publish'
+        publishWebProjects: false
+        projects: 'src/FoodOrderingSystem.API/FoodOrderingSystem.API.csproj'
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/api'
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifacts'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+
+# ── Stage 2: Docker Build & Push ──────────────────────────────
+- stage: Docker
+  displayName: 'Docker Build & Push'
+  dependsOn: Build
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  jobs:
+  - job: DockerBuildPush
+    displayName: 'Build and Push Docker Images'
+    pool:
+      vmImage: 'ubuntu-latest'
+
+    steps:
+    - task: Docker@2
+      displayName: 'Build Web Docker Image'
+      inputs:
+        command: 'build'
+        repository: '$(webImageName)'
+        dockerfile: 'src/FoodOrderingSystem.Web/Dockerfile'
+        buildContext: '$(Build.SourcesDirectory)'
+        tags: |
+          $(tag)
+          latest
+
+    - task: Docker@2
+      displayName: 'Build API Docker Image'
+      inputs:
+        command: 'build'
+        repository: '$(apiImageName)'
+        dockerfile: 'src/FoodOrderingSystem.API/Dockerfile'
+        buildContext: '$(Build.SourcesDirectory)'
+        tags: |
+          $(tag)
+          latest
+
+    # Uncomment below when Docker registry service connection is configured:
+    # - task: Docker@2
+    #   displayName: 'Push Web Image to Registry'
+    #   inputs:
+    #     command: 'push'
+    #     containerRegistry: '$(imageRegistry)'
+    #     repository: '$(webImageName)'
+    #     tags: |
+    #       $(tag)
+    #       latest
+    #
+    # - task: Docker@2
+    #   displayName: 'Push API Image to Registry'
+    #   inputs:
+    #     command: 'push'
+    #     containerRegistry: '$(imageRegistry)'
+    #     repository: '$(apiImageName)'
+    #     tags: |
+    #       $(tag)
+    #       latest
+
+# ── Stage 3: Deploy to Staging ────────────────────────────────
+- stage: DeployStaging
+  displayName: 'Deploy to Staging'
+  dependsOn: Docker
+  condition: succeeded()
+  jobs:
+  - deployment: DeployStaging
+    displayName: 'Deploy to Staging Environment'
+    pool:
+      vmImage: 'ubuntu-latest'
+    environment: 'staging'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo "Deploy to staging environment"
+            displayName: 'Deploy Step (configure for your target)'
+          # Add Azure Web App Deploy, AKS deploy, etc. here
+
+# ── Stage 4: Deploy to Production ────────────────────────────
+- stage: DeployProduction
+  displayName: 'Deploy to Production'
+  dependsOn: DeployStaging
+  condition: succeeded()
+  jobs:
+  - deployment: DeployProduction
+    displayName: 'Deploy to Production (Manual Approval)'
+    pool:
+      vmImage: 'ubuntu-latest'
+    environment: 'production'   # Set approval gate in Azure DevOps environment
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo "Deploy to production environment"
+            displayName: 'Production Deploy Step'

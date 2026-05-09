@@ -1,0 +1,39 @@
+@model FoodOrderingSystem.Core.ViewModels.OrderViewModel
+@{
+    ViewData["Title"] = "Order Confirmed";
+}
+
+<div class="container py-5 text-center">
+    <span style="font-size:80px">🎉</span>
+    <h2 class="fw-bold mt-3">Order Confirmed!</h2>
+    <p class="text-muted lead">Your order <strong>#@Model.Id</strong> has been placed successfully.</p>
+
+    <div class="card border-0 shadow-sm mx-auto mt-4" style="max-width:480px">
+        <div class="card-body text-start p-4">
+            <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Status</span>
+                <span class="badge bg-warning text-dark fs-6">@Model.StatusDisplay</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Delivery to</span>
+                <span>@Model.DeliveryAddress</span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <span class="text-muted">Total</span>
+                <strong class="text-danger">$@Model.TotalAmount.ToString("F2")</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4 d-flex justify-content-center gap-3">
+        <a asp-action="Invoice" asp-route-id="@Model.Id" class="btn btn-outline-danger">
+            <i class="bi bi-file-earmark-text me-1"></i>View Invoice
+        </a>
+        <a asp-action="History" class="btn btn-outline-secondary">
+            <i class="bi bi-receipt me-1"></i>Order History
+        </a>
+        <a asp-controller="Food" asp-action="Index" class="btn btn-danger">
+            <i class="bi bi-bag me-1"></i>Order More
+        </a>
+    </div>
+</div>

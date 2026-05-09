@@ -1,0 +1,38 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.vscode/
+*.swp
+
+## Publish
+publish/
+out/
+
+## NuGet
+*.nupkg
+packages/
+*.nuget.props
+*.nuget.targets
+
+## Logs
+logs/
+*.log
+
+## Environment
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+
+## Docker
+.dockerignore
+
+## OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## EF Migrations (keep)
+# Migrations/ <- don't ignore migrations

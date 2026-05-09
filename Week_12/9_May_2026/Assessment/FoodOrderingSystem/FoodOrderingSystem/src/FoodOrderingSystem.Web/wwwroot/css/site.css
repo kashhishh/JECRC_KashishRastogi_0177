@@ -1,0 +1,23 @@
+html { font-size: 14px; }
+@media (min-width: 768px) { html { font-size: 16px; } }
+
+/* Food Cards */
+.food-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.food-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important; }
+.food-img { height: 200px; object-fit: cover; }
+.food-img-placeholder { height: 200px; }
+
+/* Category Cards */
+.category-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.category-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.10) !important; }
+
+/* Hover Cards (Admin) */
+.hover-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.hover-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important; }
+
+/* Navbar */
+.navbar { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+
+/* General */
+body { background-color: #f8f9fa; }
+.btn-danger { background-color: #dc3545; border-color: #dc3545; }
