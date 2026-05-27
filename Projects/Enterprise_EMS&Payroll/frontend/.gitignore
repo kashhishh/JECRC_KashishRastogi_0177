@@ -1,0 +1,21 @@
+# Angular
+dist/
+.angular/
+.cache/
+
+# Node modules
+node_modules/
+
+# Build files
+*.js
+*.js.map
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# Environment
+.env
+
+# VS Code
+.vscode/
